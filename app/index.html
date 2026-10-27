@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://st.kp.yandex.net https://avatars.mds.yandex.net https://image.tmdb.org https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net; connect-src https://www.wikidata.org https://fbphdplay.top https://api.poiskkino.dev; frame-src https://theatre.stravers.live https://player.shortener2.link https://3a41cf05.obrut.show https://api.nextembed.ws; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Кино дома — бета</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="core.js"></script>
+  <script defer src="collaps-bridge.js"></script>
+  <script defer src="catalog-client.js"></script>
+  <script defer src="catalog-ui.js"></script>
+  <script defer src="adapters.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#search" aria-label="Кино дома, поиск"><span class="brand-mark" aria-hidden="true">▰</span>Кино дома</a>
+    <nav aria-label="Разделы">
+      <button class="nav-button" data-tab="home">Главная</button>
+      <button class="nav-button selected" data-tab="search" aria-current="page">Поиск</button>
+      <button class="nav-button" data-tab="favorites">Избранное <span id="favorite-count">0</span></button>
+      <button class="nav-button" data-tab="recent">Недавно</button>
+      <button class="nav-button" data-tab="watched">Просмотрено <span id="watched-count">0</span></button>
+      <button class="nav-button" data-tab="settings">Настройки</button>
+    </nav>
+    <span class="prototype-label">Бета</span>
+  </header>
+
+  <main id="main">
+    <section id="home-view" class="view" aria-labelledby="home-heading">
+      <div class="home-intro"><div class="intro"><h1 id="home-heading">Кино на вечер</h1><p>Найдите фильм или выберите, что посмотреть.</p></div><button id="home-search" class="button primary" type="button">Найти фильм</button></div>
+      <div id="home-controls" class="home-controls" hidden><div class="home-sections" aria-label="Подборка"><button class="button secondary" data-home-section="new" type="button">Новинки</button><button class="button secondary" data-home-section="best-new" type="button">Лучшее из нового</button><button class="button secondary" data-home-section="top" type="button">Лучшие</button></div><button id="home-genre" class="button secondary" type="button">Жанр: все</button></div>
+      <div class="section-heading"><h2 id="home-results-title"></h2></div><p id="home-status" class="status" role="status" hidden></p><div id="home-results" class="film-grid"></div><div id="home-pager" class="collection-pager" hidden><button id="home-prev" class="button secondary" type="button">Предыдущая</button><span id="home-page" role="status"></span><button id="home-next" class="button secondary" type="button">Следующая</button></div>
+    </section>
+    <section id="settings-view" class="view" hidden aria-labelledby="settings-heading"><div class="intro"><h1 id="settings-heading">Настройки</h1><p>Онлайн-подборки необязательны.</p></div><form id="catalog-key-form" class="catalog-key-form"><label for="catalog-key">Личный ключ каталога (необязательно)</label><input id="catalog-key" type="password" maxlength="512" autocomplete="off" spellcheck="false" autocapitalize="off"><div class="detail-library-actions"><button class="button primary" type="submit">Сохранить ключ</button><button id="catalog-key-clear" class="button secondary" type="button">Удалить ключ</button></div></form><p id="catalog-key-status" class="status" role="status"></p><p class="catalog-note">Ключ нужен только для каталога. Он не добавляется в адреса страниц и не загружается в аккаунт приложения.</p></section>
+    <section id="search-view" class="view" aria-labelledby="search-heading">
+      <div class="intro"><h1 id="search-heading">Что посмотрим?</h1><p>Найдите фильм или сериал на русском или английском.</p></div>
+      <form id="search-form" class="search-form">
+        <label class="sr-only" for="search-input">Название, ссылка Кинопоиска или ID</label>
+        <input id="search-input" type="search" autocomplete="off" maxlength="180" placeholder="Интерстеллар или Interstellar" enterkeyhint="search">
+        <button id="keyboard-open" type="button" class="button secondary" aria-label="Открыть экранную клавиатуру">Клавиатура</button>
+        <button id="search-submit" type="submit" class="button primary">Найти</button>
+      </form>
+      <p id="catalog-note" class="catalog-note">Поиск Wikidata: часть фильмов может отсутствовать. Можно вставить ссылку Кинопоиска или его числовой ID.</p>
+      <div id="suggestions" class="suggestions">
+        <h2>Или начните с фильма</h2>
+        <div class="suggestion-grid">
+          <button class="query-tile" data-starter-id="258687"><span class="query-poster" data-poster-id="258687" aria-hidden="true"></span><span class="query-copy"><strong>Интерстеллар</strong><small>2014 / Кристофер Нолан</small></span></button>
+          <button class="query-tile" data-starter-id="47015"><span class="query-poster" data-poster-id="47015" aria-hidden="true"></span><span class="query-copy"><strong>Убить Билла. Фильм 2</strong><small>2004 / Квентин Тарантино</small></span></button>
+          <button class="query-tile" data-starter-id="342"><span class="query-poster" data-poster-id="342" aria-hidden="true"></span><span class="query-copy"><strong>Криминальное чтиво</strong><small>1994 / Квентин Тарантино</small></span></button>
+        </div>
+      </div>
+      <div id="results-header" class="section-heading" hidden><h2 id="results-heading">Результаты поиска</h2><span id="results-count"></span></div>
+      <p id="search-status" class="status" role="status" aria-live="polite" hidden></p>
+      <div id="results" class="film-grid" aria-labelledby="results-heading"></div>
+    </section>
+    <section id="collection-view" class="view" hidden aria-labelledby="collection-heading"><div class="intro"><h1 id="collection-heading"></h1><p id="collection-note"></p></div><div id="collection" class="film-grid"></div><div id="collection-pager" class="collection-pager" hidden><button id="collection-prev" class="button secondary" type="button">Предыдущая</button><span id="collection-page" role="status" aria-live="polite"></span><button id="collection-next" class="button secondary" type="button">Следующая</button></div></section>
+  </main>
+  <div id="genres-dialog" class="overlay" hidden role="dialog" aria-modal="true" aria-labelledby="genres-title"><div class="keyboard-panel"><div class="keyboard-header"><h2 id="genres-title">Жанр</h2><button id="genres-close" class="button secondary" type="button">Закрыть</button></div><p id="genres-status" class="status" role="status"></p><div id="genres-list" class="genres-list"></div></div></div>
+
+  <section id="detail" class="detail view" hidden aria-labelledby="detail-title" tabindex="-1">
+    <div class="detail-top"><button id="detail-back" class="button secondary">Назад к фильмам</button></div>
+    <div class="detail-hero">
+      <div id="detail-backdrop" class="detail-backdrop" aria-hidden="true"></div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div id="detail-poster" class="detail-poster" aria-hidden="true"></div>
+      <div class="hero-copy"><div class="hero-meta"><span id="detail-type" class="type-label"></span><span id="detail-meta"></span></div><h1 id="detail-title"></h1><p id="detail-english-title" class="detail-english-title" hidden></p><p id="detail-description" class="detail-description"></p><div class="detail-library-actions"><button id="favorite-toggle" class="button secondary">В избранное</button><button id="watched-toggle" class="button secondary" type="button" aria-pressed="false">Отметить просмотренным</button></div><p id="watched-status" class="status" role="status" hidden></p></div>
+    </div>
+    <div id="kind-choice" class="kind-choice" hidden><span>Это фильм или сериал?</span><button data-kind="film" class="button secondary">Фильм</button><button data-kind="series" class="button secondary">Сериал</button></div>
+    <div class="player-heading"><h2>Выберите плеер и озвучку</h2><button id="open-page" class="button secondary">Открыть страницу фильма</button></div>
+    <p id="players-status" class="status" role="status" aria-live="polite"></p>
+    <div class="player-columns"><div id="providers" class="providers" aria-label="Плееры"></div><div class="translations-panel"><h3 id="translations-title">Озвучка</h3><div id="translations" class="translations" aria-label="Варианты выбранного плеера"></div></div></div>
+    <p class="detail-footnote">Наличие плеера в списке ещё не подтверждает воспроизведение. Если вариант не работает, выберите другой.</p>
+  </section>
+
+  <section id="watch" class="watch" hidden role="dialog" aria-modal="true" aria-label="Проверка плеера">
+    <div class="watch-bar"><button id="watch-back" class="button secondary">Сменить плеер</button><span id="watch-title"></span><button id="watch-browser" class="button secondary">Открыть страницу в браузере</button></div>
+    <p id="watch-status" class="watch-status" role="status">Открываем внешний плеер…</p>
+    <div id="watch-controls" class="watch-transport" hidden aria-label="Управление просмотром">
+      <button id="watch-rewind" class="button secondary" type="button" disabled>−10 секунд</button>
+      <button id="watch-toggle" class="button primary" type="button" disabled>Подготовка…</button>
+      <button id="watch-forward" class="button secondary" type="button" disabled>+10 секунд</button>
+      <button id="watch-sounds" class="button secondary" type="button" disabled>Озвучка</button>
+      <div class="watch-timeline" aria-live="off"><span id="watch-time">—:— / —:—</span><progress id="watch-progress" value="0" max="1" aria-label="Просмотрено" hidden></progress></div>
+    </div>
+    <div id="player-host"></div>
+    <div id="sounds-dialog" class="sounds-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="sounds-title">
+      <div class="sounds-panel"><div class="sounds-header"><h2 id="sounds-title">Озвучка</h2><button id="sounds-close" class="button secondary" type="button">Закрыть</button></div><p class="sounds-note">Названия получены от открытого плеера.</p><p id="sounds-status" role="status"></p><button id="sounds-retry" class="button secondary" type="button" hidden>Повторить</button><div id="sounds-list" class="sounds-list"></div></div>
+    </div>
+  </section>
+
+  <div id="keyboard" class="overlay" hidden role="dialog" aria-modal="true" aria-labelledby="keyboard-title">
+    <div class="keyboard-panel"><div class="keyboard-header"><h2 id="keyboard-title">Поиск фильма</h2><button id="keyboard-close" class="button secondary">Закрыть</button></div><p id="keyboard-text" class="keyboard-text"></p><div id="keyboard-keys" class="keyboard-keys"></div><div class="keyboard-actions"><button data-key="space" class="button secondary">Пробел</button><button data-key="delete" class="button secondary">Стереть</button><button data-key="clear" class="button secondary">Очистить</button><button data-key="layout" class="button secondary">АБВ / ABC / 123</button><button id="keyboard-search" class="button primary">Найти</button></div></div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <footer class="helpbar"><span><b>Стрелки</b> выбор</span><span><b>OK</b> открыть</span><span><b>Назад</b> вернуться</span></footer>
+</body>
+</html>

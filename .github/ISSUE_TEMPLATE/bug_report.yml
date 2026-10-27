@@ -1,0 +1,57 @@
+name: Bug report
+description: Report a reproducible app or documentation problem without private device data.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use English. Do not include keys, signing profiles, serial numbers, DUIDs, MAC addresses, private network details, raw player URLs, personal watch lists, or unredacted screenshots. For sensitive findings, read SECURITY.md instead of posting details here.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Browser preview
+        - Installed TV app
+        - Packaging or installation
+        - TV documentation or rollback
+        - Repository checks
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Commit or app version
+      description: Give a public commit SHA or app version, not a personal artifact or debug URL.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: For a TV, include only model code, OS version, and firmware build. For web, include browser and OS. Omit unique identifiers and addresses.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest useful sequence and distinguish real TV steps from browser fixtures.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+      description: Include a sanitized error summary and what you verified. Do not paste a raw session dump.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked the known limitations and kept private data out of this report.
+          required: true
+        - label: I identified whether this is a browser, emulator, real TV, or documentation observation.
+          required: true

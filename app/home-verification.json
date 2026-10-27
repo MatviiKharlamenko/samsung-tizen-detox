@@ -1,0 +1,56 @@
+{
+  "version": "0.2.6",
+  "scope": "Isolated Chrome, own synthetic key/data, all outside traffic mocked; no real authenticated GET or TV",
+  "checks": [
+    {
+      "name": "Keyless Home immediately shows known films without requests/setup panel/fake feeds; Search CTA focuses the own keyboard",
+      "passed": true
+    },
+    {
+      "name": "Personal recent/favorite cards and shared starter metadata deduplicate, keep both badges and support D-pad/detail/Back without a key",
+      "passed": true
+    },
+    {
+      "name": "Key is trimmed and saved only in private key storage, used only as header, and never echoed/cached or written into the library",
+      "passed": true
+    },
+    {
+      "name": "Unknown page count stays unknown; Next uses the real prior cursor and a failed next page restores the previous list/retry path",
+      "passed": true
+    },
+    {
+      "name": "Genre modal traps D-pad/Tab and applies the actual genre plus section filters without catalog-index guesses",
+      "passed": true
+    },
+    {
+      "name": "A last-good expired metadata record is shown with an explicit stale label when refresh fails",
+      "passed": true
+    },
+    {
+      "name": "Rejected-key and rate-limit errors use static safe copy and do not expose response bodies or invent cards",
+      "passed": true
+    },
+    {
+      "name": "Optional cache quota failure preserves key/library and in-memory cursor pagination still works",
+      "passed": true
+    },
+    {
+      "name": "Key replacement aborts prior work, recreates the client and clears only catalog cursor/cache state",
+      "passed": true
+    },
+    {
+      "name": "Large public metadata responses obey the600KiB LRU budget without evicting watched/favorites or the API key",
+      "passed": true
+    },
+    {
+      "name": "Explicit key removal leaves personal collections intact, stops catalog requests and keeps the mobile layout inside the viewport",
+      "passed": true
+    },
+    {
+      "name": "A malformed stored key containing CRLF is never passed to the client or sent anonymously",
+      "passed": true
+    }
+  ],
+  "allPassed": true,
+  "unhandledErrors": []
+}

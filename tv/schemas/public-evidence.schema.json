@@ -1,0 +1,1028 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Samsung Tizen Detox exact sanitized evidence allowlist, snapshot 2",
+  "description": "Exact reviewed single-device historical summary, with separate system-reboot, SDK, Kino Doma app and IME evidence. Raw output, additional fields and private identifiers are rejected. This schema fixes the reviewed snapshot; it is not a general model-compatibility schema.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "recorded_date",
+    "evidence_origin",
+    "tested_device_count",
+    "device",
+    "root",
+    "reboot",
+    "verified_changes",
+    "audit_coverage",
+    "performance",
+    "negative_findings",
+    "checks_not_run",
+    "sdk_channel",
+    "installed_web_app",
+    "catalog_mode",
+    "native_ime"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2.0"
+    },
+    "recorded_date": {
+      "type": "string",
+      "const": "2026-10-26"
+    },
+    "evidence_origin": {
+      "type": "string",
+      "const": "maintainer_observation_sanitized_summary"
+    },
+    "tested_device_count": {
+      "type": "integer",
+      "const": 1
+    },
+    "device": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "model",
+        "model_year",
+        "os",
+        "os_version",
+        "architecture",
+        "kernel",
+        "firmware_family",
+        "firmware_version"
+      ],
+      "properties": {
+        "model": {
+          "type": "string",
+          "const": "QE75Q64DAUXXN"
+        },
+        "model_year": {
+          "type": "integer",
+          "const": 2024
+        },
+        "os": {
+          "type": "string",
+          "const": "Tizen"
+        },
+        "os_version": {
+          "type": "string",
+          "const": "9.0"
+        },
+        "architecture": {
+          "type": "string",
+          "const": "armv7l"
+        },
+        "kernel": {
+          "type": "string",
+          "const": "5.4.249"
+        },
+        "firmware_family": {
+          "type": "string",
+          "const": "T-NKLDDEUC-0090"
+        },
+        "firmware_version": {
+          "type": "string",
+          "const": "2123.9"
+        }
+      }
+    },
+    "root": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authenticated",
+        "uid",
+        "euid",
+        "gid",
+        "egid",
+        "runtime",
+        "cap_bnd",
+        "cap_prm",
+        "cap_eff",
+        "cap_last_cap",
+        "smack_label",
+        "smack_onlycap",
+        "smack_ptrace_policy",
+        "no_new_privs",
+        "seccomp_mode",
+        "reacquired_after_software_reboot",
+        "persistent_boot_root_installed",
+        "upstream_commit",
+        "final_temporary_session_closed"
+      ],
+      "properties": {
+        "authenticated": {
+          "type": "boolean",
+          "const": true,
+          "description": "The historical root session authenticated successfully. This does not mean the session is still running."
+        },
+        "uid": {
+          "type": "integer",
+          "const": 0
+        },
+        "euid": {
+          "type": "integer",
+          "const": 0
+        },
+        "gid": {
+          "type": "integer",
+          "const": 0
+        },
+        "egid": {
+          "type": "integer",
+          "const": 0
+        },
+        "runtime": {
+          "type": "string",
+          "const": "6.0"
+        },
+        "cap_bnd": {
+          "type": "string",
+          "const": "0000003fffffffff"
+        },
+        "cap_prm": {
+          "type": "string",
+          "const": "0000003fffffffff"
+        },
+        "cap_eff": {
+          "type": "string",
+          "const": "0000003fffffffff"
+        },
+        "cap_last_cap": {
+          "type": "integer",
+          "const": 37
+        },
+        "smack_label": {
+          "type": "string",
+          "const": "User"
+        },
+        "smack_onlycap": {
+          "type": "string",
+          "const": "empty_readback"
+        },
+        "smack_ptrace_policy": {
+          "type": "integer",
+          "const": 1
+        },
+        "no_new_privs": {
+          "type": "integer",
+          "const": 0
+        },
+        "seccomp_mode": {
+          "type": "integer",
+          "const": 0
+        },
+        "reacquired_after_software_reboot": {
+          "type": "boolean",
+          "const": true
+        },
+        "persistent_boot_root_installed": {
+          "type": "boolean",
+          "const": false
+        },
+        "upstream_commit": {
+          "type": "string",
+          "const": "3b97edf3762db7670585d73e29623dc56195bf98"
+        },
+        "final_temporary_session_closed": {
+          "type": "boolean",
+          "const": true,
+          "description": "The final temporary root session was closed after the app checks. Persistent system settings have separate rollback procedures."
+        }
+      },
+      "description": "Capabilities observed during the tested temporary session. They do not represent an active root service; final_temporary_session_closed records final cleanup."
+    },
+    "reboot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "boot_id_changed",
+        "power_removal_tested",
+        "firmware_update_tested"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "full_software_os_reboot"
+        },
+        "boot_id_changed": {
+          "type": "boolean",
+          "const": true
+        },
+        "power_removal_tested": {
+          "type": "boolean",
+          "const": false
+        },
+        "firmware_update_tested": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "verified_changes": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "prefixItems": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "evidence_level",
+            "vconf_key",
+            "vconf_type",
+            "value",
+            "visual_confirmation"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "const": "russian_osd"
+            },
+            "evidence_level": {
+              "type": "string",
+              "const": "reboot-checked"
+            },
+            "vconf_key": {
+              "type": "string",
+              "const": "db/menu_widget/language"
+            },
+            "vconf_type": {
+              "type": "string",
+              "const": "string"
+            },
+            "value": {
+              "type": "string",
+              "const": "ru_RU.utf8"
+            },
+            "visual_confirmation": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "evidence_level",
+            "frequency_mhz",
+            "wpa_state",
+            "persistent_ap_lock_installed"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "const": "wifi_5ghz"
+            },
+            "evidence_level": {
+              "type": "string",
+              "const": "reboot-checked"
+            },
+            "frequency_mhz": {
+              "type": "integer",
+              "const": 5560
+            },
+            "wpa_state": {
+              "type": "string",
+              "const": "COMPLETED"
+            },
+            "persistent_ap_lock_installed": {
+              "type": "boolean",
+              "const": false
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "evidence_level",
+            "resolvers",
+            "actual_resolver_readback"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "const": "dns"
+            },
+            "evidence_level": {
+              "type": "string",
+              "const": "reboot-checked"
+            },
+            "resolvers": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "prefixItems": [
+                {
+                  "type": "string",
+                  "const": "94.140.14.14"
+                },
+                {
+                  "type": "string",
+                  "const": "94.140.15.15"
+                }
+              ],
+              "items": false
+            },
+            "actual_resolver_readback": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "evidence_level",
+            "app_id",
+            "global_app_disable",
+            "process_absent"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "const": "hbbtv"
+            },
+            "evidence_level": {
+              "type": "string",
+              "const": "reboot-checked"
+            },
+            "app_id": {
+              "type": "string",
+              "const": "org.tizen.hbbtv"
+            },
+            "global_app_disable": {
+              "type": "boolean",
+              "const": true
+            },
+            "process_absent": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "evidence_level",
+            "app_id",
+            "global_app_disable",
+            "process_absent"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "const": "acr"
+            },
+            "evidence_level": {
+              "type": "string",
+              "const": "reboot-checked"
+            },
+            "app_id": {
+              "type": "string",
+              "const": "com.samsung.tv.acr"
+            },
+            "global_app_disable": {
+              "type": "boolean",
+              "const": true
+            },
+            "process_absent": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "evidence_level",
+            "app_id",
+            "global_app_disable",
+            "process_absent"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "const": "targeted_ads"
+            },
+            "evidence_level": {
+              "type": "string",
+              "const": "reboot-checked"
+            },
+            "app_id": {
+              "type": "string",
+              "const": "com.samsung.tv.targeted-ad-service"
+            },
+            "global_app_disable": {
+              "type": "boolean",
+              "const": true
+            },
+            "process_absent": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "evidence_level",
+            "app_id",
+            "global_app_disable",
+            "process_absent"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "const": "samsung_analytics"
+            },
+            "evidence_level": {
+              "type": "string",
+              "const": "reboot-checked"
+            },
+            "app_id": {
+              "type": "string",
+              "const": "com.samsung.tizen.samsung-analytics"
+            },
+            "global_app_disable": {
+              "type": "boolean",
+              "const": true
+            },
+            "process_absent": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "evidence_level",
+            "unit",
+            "stock_unit_sha256",
+            "stock_unit_unchanged",
+            "own_marker_present",
+            "process_absent"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "const": "canalysis"
+            },
+            "evidence_level": {
+              "type": "string",
+              "const": "reboot-checked"
+            },
+            "unit": {
+              "type": "string",
+              "const": "canalysis-service.service"
+            },
+            "stock_unit_sha256": {
+              "type": "string",
+              "const": "71aee4ce76c4addf3a5f6b28ce0378995d265b60d66c5bc3f9d34ad6e5b26c98"
+            },
+            "stock_unit_unchanged": {
+              "type": "boolean",
+              "const": true
+            },
+            "own_marker_present": {
+              "type": "boolean",
+              "const": true
+            },
+            "process_absent": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        }
+      ],
+      "items": false
+    },
+    "audit_coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "registered_app_service_entries",
+        "onboot_entries",
+        "autorestart_entries",
+        "preload_entries",
+        "loaded_units_before_reboot",
+        "loaded_units_after_reboot",
+        "preexisting_failed_units",
+        "recorded_dependency_entries",
+        "complete_dependency_graph"
+      ],
+      "properties": {
+        "registered_app_service_entries": {
+          "type": "integer",
+          "const": 479
+        },
+        "onboot_entries": {
+          "type": "integer",
+          "const": 24
+        },
+        "autorestart_entries": {
+          "type": "integer",
+          "const": 52
+        },
+        "preload_entries": {
+          "type": "integer",
+          "const": 324
+        },
+        "loaded_units_before_reboot": {
+          "type": "integer",
+          "const": 880
+        },
+        "loaded_units_after_reboot": {
+          "type": "integer",
+          "const": 877
+        },
+        "preexisting_failed_units": {
+          "type": "integer",
+          "const": 6,
+          "description": "Failed units in the after-reboot snapshot that were also failed before reboot. The before snapshot had seven failed units and the after snapshot had six; this overlap is six. No cause is inferred."
+        },
+        "recorded_dependency_entries": {
+          "type": "integer",
+          "const": 6
+        },
+        "complete_dependency_graph": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "performance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cpu_before_reboot_percent",
+        "before_sample_seconds",
+        "cpu_other_post_boot_sample_percent",
+        "samples_comparable",
+        "measured_speedup_claimed"
+      ],
+      "properties": {
+        "cpu_before_reboot_percent": {
+          "type": "number",
+          "const": 9.16
+        },
+        "before_sample_seconds": {
+          "type": "integer",
+          "const": 5
+        },
+        "cpu_other_post_boot_sample_percent": {
+          "type": "number",
+          "const": 22.55
+        },
+        "samples_comparable": {
+          "type": "boolean",
+          "const": false
+        },
+        "measured_speedup_claimed": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "negative_findings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contents_recognition_temporary_stop_succeeded",
+        "contents_recognition_persistent_mask_result",
+        "contents_recognition_restored_active",
+        "voice_components_disabled"
+      ],
+      "properties": {
+        "contents_recognition_temporary_stop_succeeded": {
+          "type": "boolean",
+          "const": true
+        },
+        "contents_recognition_persistent_mask_result": {
+          "type": "string",
+          "const": "EROFS"
+        },
+        "contents_recognition_restored_active": {
+          "type": "boolean",
+          "const": true
+        },
+        "voice_components_disabled": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "checks_not_run": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "prefixItems": [
+        {
+          "type": "string",
+          "const": "power_removal"
+        },
+        {
+          "type": "string",
+          "const": "firmware_update_persistence"
+        },
+        {
+          "type": "string",
+          "const": "full_post_change_drm_playback_and_audio"
+        },
+        {
+          "type": "string",
+          "const": "ps5_hdmi_hdr_handshake"
+        },
+        {
+          "type": "string",
+          "const": "universal_smack_domain_access"
+        },
+        {
+          "type": "string",
+          "const": "unsigned_native_elf_execution"
+        },
+        {
+          "type": "string",
+          "const": "tee_drm_uep_secure_boot_bypass"
+        },
+        {
+          "type": "string",
+          "const": "complete_telemetry_traffic_audit"
+        }
+      ],
+      "items": false
+    },
+    "sdk_channel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_level",
+        "root_required_for_own_web_app_operations",
+        "signed_own_wgt_install_update_verified",
+        "verified_operations",
+        "own_web_app_cdp_viewport_screenshot_verified",
+        "full_native_ui_capture_implied",
+        "signature_requirement_bypassed",
+        "debug_inspection_terminated",
+        "owned_debug_forwarding_removed",
+        "normal_launch_after_debug_verified"
+      ],
+      "properties": {
+        "evidence_level": {
+          "type": "string",
+          "const": "observed"
+        },
+        "root_required_for_own_web_app_operations": {
+          "type": "boolean",
+          "const": false
+        },
+        "signed_own_wgt_install_update_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "verified_operations": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "prefixItems": [
+            {
+              "type": "string",
+              "const": "vd_appinstall"
+            },
+            {
+              "type": "string",
+              "const": "was_execute"
+            },
+            {
+              "type": "string",
+              "const": "debug"
+            },
+            {
+              "type": "string",
+              "const": "was_kill"
+            }
+          ],
+          "items": false
+        },
+        "own_web_app_cdp_viewport_screenshot_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "full_native_ui_capture_implied": {
+          "type": "boolean",
+          "const": false
+        },
+        "signature_requirement_bypassed": {
+          "type": "boolean",
+          "const": false
+        },
+        "debug_inspection_terminated": {
+          "type": "boolean",
+          "const": true
+        },
+        "owned_debug_forwarding_removed": {
+          "type": "boolean",
+          "const": true
+        },
+        "normal_launch_after_debug_verified": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "installed_web_app": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "current_verified_version",
+        "installed",
+        "home_icon_pinned",
+        "home_icon_position",
+        "launch_from_home_verified",
+        "mac_preview_server_required",
+        "previous_version_remote_play_pause_seek_resume_verified",
+        "version_0_2_4_physical_ukrainian_track_selection_verified",
+        "version_0_2_4_playback_continued",
+        "version_0_2_5_manual_watched_mark_verified",
+        "version_0_2_5_app_restart_persistence_verified",
+        "version_0_2_5_watched_collection_verified",
+        "owned_test_mark_removed",
+        "own_ru_en_keyboard_verified",
+        "watched_browser_checks_passed",
+        "full_os_reboot_after_current_app_version_tested",
+        "version_0_2_6_keyless_home_native_confirmed",
+        "version_0_2_6_starter_cards_count",
+        "version_0_2_6_starter_cards_are_live_ranking",
+        "version_0_2_6_unavailable_online_feed_controls_hidden",
+        "version_0_2_6_physical_detail_actions_verified",
+        "version_0_2_6_back_restores_card_focus_verified",
+        "version_0_2_6_manual_watched_mark_verified",
+        "version_0_2_6_app_restart_persistence_verified",
+        "version_0_2_6_watched_collection_verified",
+        "version_0_2_6_actual_russian_english_search_verified",
+        "version_0_2_6_final_home_loaded_posters",
+        "version_0_2_6_final_home_visible_errors",
+        "version_0_2_6_final_home_has_iframe"
+      ],
+      "properties": {
+        "current_verified_version": {
+          "type": "string",
+          "const": "0.2.6"
+        },
+        "installed": {
+          "type": "boolean",
+          "const": true
+        },
+        "home_icon_pinned": {
+          "type": "boolean",
+          "const": true
+        },
+        "home_icon_position": {
+          "type": "string",
+          "const": "immediately_after_youtube"
+        },
+        "launch_from_home_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "mac_preview_server_required": {
+          "type": "boolean",
+          "const": false
+        },
+        "previous_version_remote_play_pause_seek_resume_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "version_0_2_4_physical_ukrainian_track_selection_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "version_0_2_4_playback_continued": {
+          "type": "boolean",
+          "const": true
+        },
+        "version_0_2_5_manual_watched_mark_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "version_0_2_5_app_restart_persistence_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "version_0_2_5_watched_collection_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "owned_test_mark_removed": {
+          "type": "boolean",
+          "const": true
+        },
+        "own_ru_en_keyboard_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "watched_browser_checks_passed": {
+          "type": "integer",
+          "const": 8
+        },
+        "full_os_reboot_after_current_app_version_tested": {
+          "type": "boolean",
+          "const": false
+        },
+        "version_0_2_6_keyless_home_native_confirmed": {
+          "type": "boolean",
+          "const": true
+        },
+        "version_0_2_6_starter_cards_count": {
+          "type": "integer",
+          "const": 3
+        },
+        "version_0_2_6_starter_cards_are_live_ranking": {
+          "type": "boolean",
+          "const": false
+        },
+        "version_0_2_6_unavailable_online_feed_controls_hidden": {
+          "type": "boolean",
+          "const": true
+        },
+        "version_0_2_6_physical_detail_actions_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "version_0_2_6_back_restores_card_focus_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "version_0_2_6_manual_watched_mark_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "version_0_2_6_app_restart_persistence_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "version_0_2_6_watched_collection_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "version_0_2_6_actual_russian_english_search_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "version_0_2_6_final_home_loaded_posters": {
+          "type": "integer",
+          "const": 3
+        },
+        "version_0_2_6_final_home_visible_errors": {
+          "type": "integer",
+          "const": 0
+        },
+        "version_0_2_6_final_home_has_iframe": {
+          "type": "boolean",
+          "const": false
+        }
+      },
+      "description": "Sanitized Kino Doma test stages. An app-process restart is distinct from a full OS reboot; earlier playback tests retain their original version scope."
+    },
+    "catalog_mode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "chosen_mode",
+        "automatic_fresh_genre_rating_feeds_enabled",
+        "starter_and_personal_cards_not_live_ranking",
+        "optional_provider",
+        "personal_key_configured",
+        "key_setup_pending",
+        "authenticated_request_verified",
+        "published_demo_requests_per_day",
+        "published_demo_max_pages",
+        "optional_client_mock_checks_passed",
+        "final_keyless_home_catalog_api_requests_observed"
+      ],
+      "properties": {
+        "chosen_mode": {
+          "type": "string",
+          "const": "keyless"
+        },
+        "automatic_fresh_genre_rating_feeds_enabled": {
+          "type": "boolean",
+          "const": false
+        },
+        "starter_and_personal_cards_not_live_ranking": {
+          "type": "boolean",
+          "const": true
+        },
+        "optional_provider": {
+          "type": "string",
+          "const": "PoiskKino"
+        },
+        "personal_key_configured": {
+          "type": "boolean",
+          "const": false
+        },
+        "key_setup_pending": {
+          "type": "boolean",
+          "const": false
+        },
+        "authenticated_request_verified": {
+          "type": "boolean",
+          "const": false
+        },
+        "published_demo_requests_per_day": {
+          "type": "integer",
+          "const": 200
+        },
+        "published_demo_max_pages": {
+          "type": "integer",
+          "const": 10
+        },
+        "optional_client_mock_checks_passed": {
+          "type": "integer",
+          "const": 17
+        },
+        "final_keyless_home_catalog_api_requests_observed": {
+          "type": "integer",
+          "const": 0
+        }
+      }
+    },
+    "native_ime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "russian_stock_keyboard_confirmed",
+        "russian_preferences_do_not_prove_layout",
+        "current_input_language",
+        "transient_all_languages_flag_restored",
+        "all_languages_flag_value",
+        "owned_virtual_input_devices_removed",
+        "cleanup_required",
+        "physical_input_devices_modified",
+        "native_down_focus_movement_verified",
+        "full_native_ime_selection_verified"
+      ],
+      "properties": {
+        "russian_stock_keyboard_confirmed": {
+          "type": "boolean",
+          "const": false
+        },
+        "russian_preferences_do_not_prove_layout": {
+          "type": "boolean",
+          "const": true
+        },
+        "current_input_language": {
+          "type": "string",
+          "const": "en_GB"
+        },
+        "transient_all_languages_flag_restored": {
+          "type": "boolean",
+          "const": true
+        },
+        "all_languages_flag_value": {
+          "type": "boolean",
+          "const": false
+        },
+        "owned_virtual_input_devices_removed": {
+          "type": "boolean",
+          "const": true
+        },
+        "cleanup_required": {
+          "type": "boolean",
+          "const": false
+        },
+        "physical_input_devices_modified": {
+          "type": "boolean",
+          "const": false
+        },
+        "native_down_focus_movement_verified": {
+          "type": "boolean",
+          "const": true
+        },
+        "full_native_ime_selection_verified": {
+          "type": "boolean",
+          "const": false
+        }
+      },
+      "description": "Stock native IME findings. Russian OSD/preferences and the own app keyboard do not establish a working Russian stock layout."
+    }
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "schema_version": "2.0",
+  "recorded_date": "2026-10-26",
+  "evidence_origin": "maintainer_observation_sanitized_summary",
+  "tested_device_count": 1,
+  "device": {
+    "model": "QE75Q64DAUXXN",
+    "model_year": 2024,
+    "os": "Tizen",
+    "os_version": "9.0",
+    "architecture": "armv7l",
+    "kernel": "5.4.249",
+    "firmware_family": "T-NKLDDEUC-0090",
+    "firmware_version": "2123.9"
+  },
+  "root": {
+    "authenticated": true,
+    "uid": 0,
+    "euid": 0,
+    "gid": 0,
+    "egid": 0,
+    "runtime": "6.0",
+    "cap_bnd": "0000003fffffffff",
+    "cap_prm": "0000003fffffffff",
+    "cap_eff": "0000003fffffffff",
+    "cap_last_cap": 37,
+    "smack_label": "User",
+    "smack_onlycap": "empty_readback",
+    "smack_ptrace_policy": 1,
+    "no_new_privs": 0,
+    "seccomp_mode": 0,
+    "reacquired_after_software_reboot": true,
+    "persistent_boot_root_installed": false,
+    "upstream_commit": "3b97edf3762db7670585d73e29623dc56195bf98",
+    "final_temporary_session_closed": true
+  },
+  "reboot": {
+    "kind": "full_software_os_reboot",
+    "boot_id_changed": true,
+    "power_removal_tested": false,
+    "firmware_update_tested": false
+  },
+  "verified_changes": [
+    {
+      "id": "russian_osd",
+      "evidence_level": "reboot-checked",
+      "vconf_key": "db/menu_widget/language",
+      "vconf_type": "string",
+      "value": "ru_RU.utf8",
+      "visual_confirmation": true
+    },
+    {
+      "id": "wifi_5ghz",
+      "evidence_level": "reboot-checked",
+      "frequency_mhz": 5560,
+      "wpa_state": "COMPLETED",
+      "persistent_ap_lock_installed": false
+    },
+    {
+      "id": "dns",
+      "evidence_level": "reboot-checked",
+      "resolvers": [
+        "94.140.14.14",
+        "94.140.15.15"
+      ],
+      "actual_resolver_readback": true
+    },
+    {
+      "id": "hbbtv",
+      "evidence_level": "reboot-checked",
+      "app_id": "org.tizen.hbbtv",
+      "global_app_disable": true,
+      "process_absent": true
+    },
+    {
+      "id": "acr",
+      "evidence_level": "reboot-checked",
+      "app_id": "com.samsung.tv.acr",
+      "global_app_disable": true,
+      "process_absent": true
+    },
+    {
+      "id": "targeted_ads",
+      "evidence_level": "reboot-checked",
+      "app_id": "com.samsung.tv.targeted-ad-service",
+      "global_app_disable": true,
+      "process_absent": true
+    },
+    {
+      "id": "samsung_analytics",
+      "evidence_level": "reboot-checked",
+      "app_id": "com.samsung.tizen.samsung-analytics",
+      "global_app_disable": true,
+      "process_absent": true
+    },
+    {
+      "id": "canalysis",
+      "evidence_level": "reboot-checked",
+      "unit": "canalysis-service.service",
+      "stock_unit_sha256": "71aee4ce76c4addf3a5f6b28ce0378995d265b60d66c5bc3f9d34ad6e5b26c98",
+      "stock_unit_unchanged": true,
+      "own_marker_present": true,
+      "process_absent": true
+    }
+  ],
+  "audit_coverage": {
+    "registered_app_service_entries": 479,
+    "onboot_entries": 24,
+    "autorestart_entries": 52,
+    "preload_entries": 324,
+    "loaded_units_before_reboot": 880,
+    "loaded_units_after_reboot": 877,
+    "preexisting_failed_units": 6,
+    "recorded_dependency_entries": 6,
+    "complete_dependency_graph": false
+  },
+  "performance": {
+    "cpu_before_reboot_percent": 9.16,
+    "before_sample_seconds": 5,
+    "cpu_other_post_boot_sample_percent": 22.55,
+    "samples_comparable": false,
+    "measured_speedup_claimed": false
+  },
+  "negative_findings": {
+    "contents_recognition_temporary_stop_succeeded": true,
+    "contents_recognition_persistent_mask_result": "EROFS",
+    "contents_recognition_restored_active": true,
+    "voice_components_disabled": false
+  },
+  "checks_not_run": [
+    "power_removal",
+    "firmware_update_persistence",
+    "full_post_change_drm_playback_and_audio",
+    "ps5_hdmi_hdr_handshake",
+    "universal_smack_domain_access",
+    "unsigned_native_elf_execution",
+    "tee_drm_uep_secure_boot_bypass",
+    "complete_telemetry_traffic_audit"
+  ],
+  "sdk_channel": {
+    "evidence_level": "observed",
+    "root_required_for_own_web_app_operations": false,
+    "signed_own_wgt_install_update_verified": true,
+    "verified_operations": [
+      "vd_appinstall",
+      "was_execute",
+      "debug",
+      "was_kill"
+    ],
+    "own_web_app_cdp_viewport_screenshot_verified": true,
+    "full_native_ui_capture_implied": false,
+    "signature_requirement_bypassed": false,
+    "debug_inspection_terminated": true,
+    "owned_debug_forwarding_removed": true,
+    "normal_launch_after_debug_verified": true
+  },
+  "installed_web_app": {
+    "current_verified_version": "0.2.6",
+    "installed": true,
+    "home_icon_pinned": true,
+    "home_icon_position": "immediately_after_youtube",
+    "launch_from_home_verified": true,
+    "mac_preview_server_required": false,
+    "previous_version_remote_play_pause_seek_resume_verified": true,
+    "version_0_2_4_physical_ukrainian_track_selection_verified": true,
+    "version_0_2_4_playback_continued": true,
+    "version_0_2_5_manual_watched_mark_verified": true,
+    "version_0_2_5_app_restart_persistence_verified": true,
+    "version_0_2_5_watched_collection_verified": true,
+    "owned_test_mark_removed": true,
+    "own_ru_en_keyboard_verified": true,
+    "watched_browser_checks_passed": 8,
+    "full_os_reboot_after_current_app_version_tested": false,
+    "version_0_2_6_keyless_home_native_confirmed": true,
+    "version_0_2_6_starter_cards_count": 3,
+    "version_0_2_6_starter_cards_are_live_ranking": false,
+    "version_0_2_6_unavailable_online_feed_controls_hidden": true,
+    "version_0_2_6_physical_detail_actions_verified": true,
+    "version_0_2_6_back_restores_card_focus_verified": true,
+    "version_0_2_6_manual_watched_mark_verified": true,
+    "version_0_2_6_app_restart_persistence_verified": true,
+    "version_0_2_6_watched_collection_verified": true,
+    "version_0_2_6_actual_russian_english_search_verified": true,
+    "version_0_2_6_final_home_loaded_posters": 3,
+    "version_0_2_6_final_home_visible_errors": 0,
+    "version_0_2_6_final_home_has_iframe": false
+  },
+  "catalog_mode": {
+    "chosen_mode": "keyless",
+    "automatic_fresh_genre_rating_feeds_enabled": false,
+    "starter_and_personal_cards_not_live_ranking": true,
+    "optional_provider": "PoiskKino",
+    "personal_key_configured": false,
+    "key_setup_pending": false,
+    "authenticated_request_verified": false,
+    "published_demo_requests_per_day": 200,
+    "published_demo_max_pages": 10,
+    "optional_client_mock_checks_passed": 17,
+    "final_keyless_home_catalog_api_requests_observed": 0
+  },
+  "native_ime": {
+    "russian_stock_keyboard_confirmed": false,
+    "russian_preferences_do_not_prove_layout": true,
+    "current_input_language": "en_GB",
+    "transient_all_languages_flag_restored": true,
+    "all_languages_flag_value": false,
+    "owned_virtual_input_devices_removed": true,
+    "cleanup_required": false,
+    "physical_input_devices_modified": false,
+    "native_down_focus_movement_verified": true,
+    "full_native_ime_selection_verified": false
+  }
+}

@@ -1,0 +1,37 @@
+# Research scratch and local dependencies
+work/
+outputs/
+node_modules/
+.venv/
+__pycache__/
+.DS_Store
+build/
+.pytest_cache/
+
+# Personal credentials, signing material and device builds
+.env
+.env.*
+*.private
+*.private.*
+*.p12
+*.pfx
+*.pem
+*.key
+*.crt
+*.cer
+*.wgt
+*.zip
+author-signature.xml
+signature1.xml
+profiles.xml
+keystore/
+backups/
+private/
+raw/
+state/
+screenshots/
+*.db
+*.db-*
+*.sqlite*
+*.log
+*.pcap*

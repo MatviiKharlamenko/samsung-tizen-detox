@@ -1,0 +1,84 @@
+{
+  "version": "0.2.7",
+  "currentSourceVersion": "0.2.7",
+  "evidenceType": "Aggregate of a fresh complete browser run; separate from the six retained historical report files",
+  "command": "npm run test:browser",
+  "tooling": {
+    "playwrightVersion": "1.62.1",
+    "execution": "Sequential suites with an ephemeral loopback preview server and isolated Chrome contexts"
+  },
+  "scope": {
+    "externalHTTP": "Controlled fixtures or blocked requests",
+    "apiKeys": "Synthetic test values only; no real authenticated catalog request",
+    "realMediaUsed": false,
+    "tvConnection": false,
+    "nativeValidation": false
+  },
+  "suites": [
+    {
+      "suite": "Home",
+      "script": "verify-home.cjs",
+      "sourceVersion": "0.2.7",
+      "passedChecks": 16,
+      "allPassed": true,
+      "unhandledErrors": 0
+    },
+    {
+      "suite": "Watched",
+      "script": "verify-watched.cjs",
+      "sourceVersion": "0.2.7",
+      "passedChecks": 8,
+      "allPassed": true,
+      "unhandledErrors": 0
+    },
+    {
+      "suite": "Identity refinement",
+      "script": "verify-refinement.cjs",
+      "sourceVersion": "0.2.7",
+      "passedChecks": 4,
+      "allPassed": true,
+      "unhandledErrors": 0
+    },
+    {
+      "suite": "Search and remote focus",
+      "script": "verify-qol.cjs",
+      "sourceVersion": "0.2.7",
+      "passedChecks": 12,
+      "allPassed": true,
+      "unhandledErrors": 0
+    },
+    {
+      "suite": "Collaps transport",
+      "script": "verify-collaps.cjs",
+      "sourceVersion": "0.2.7",
+      "passedChecks": 14,
+      "allPassed": true,
+      "unhandledErrors": 0
+    },
+    {
+      "suite": "Audio selection",
+      "script": "verify-sounds.cjs",
+      "sourceVersion": "0.2.7",
+      "passedChecks": 9,
+      "allPassed": true,
+      "unhandledErrors": 0
+    }
+  ],
+  "totalPassedChecks": 63,
+  "allSixSuitesPassed": true,
+  "unhandledErrors": 0,
+  "historicalReportFilesRetainedWithOriginalVersions": true,
+  "recordedRepositoryToolChecks": {
+    "pythonTestsPassed": 17,
+    "nodeDomainChecksPassed": 48,
+    "verificationToolGroupsPassed": 2,
+    "reportDirectoryPreludeCasesPassed": 18,
+    "normalAndOptimizedValidatorCasesPassed": 26
+  },
+  "nativeBaseline": {
+    "version": "0.2.6",
+    "runtimeSnapshot": "../evidence/native-0.2.6/runtime/",
+    "preservedByteForByte": true
+  },
+  "limits": "Source 0.2.7 is browser-verified only. These fixtures do not verify native codecs, remote firmware behavior, real catalog authentication, provider availability, or media playback."
+}

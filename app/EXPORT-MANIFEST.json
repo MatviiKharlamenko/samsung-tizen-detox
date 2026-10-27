@@ -1,0 +1,264 @@
+{
+  "exportVersion": "0.2.7",
+  "exportedAtUtc": "2026-10-27T10:44:56.836136+00:00",
+  "runtimeSource": "Source beta 0.2.7 with narrow search-focus and catalog request-lifecycle fixes; native 0.2.6 preserved separately",
+  "runtimeByteForByteMatch": false,
+  "manifestPreservedExactly": false,
+  "runtimeFileCount": 11,
+  "archiveFileCountIncludingThisManifest": 40,
+  "checksummedFileCount": 39,
+  "selfHashExcluded": true,
+  "installationArchivesIncluded": false,
+  "certificatesOrPrivateKeysIncluded": false,
+  "screenshotsIncluded": false,
+  "tvSpecificDataIncluded": false,
+  "publicApplicationIdentityPreservedFromManifest": true,
+  "entries": [
+    {
+      "name": "BROWSER-STATUS.json",
+      "bytes": 2522,
+      "sha256": "02b09a7413422a96803ec1ff1e37706e765f9ea64a10e9727bb5535f08665bb8",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "DESIGN.md",
+      "bytes": 5495,
+      "sha256": "14b814cab20d1dace4b67a9842f9cafc8d3009f0e6725042382f4e4615c5cd06",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "NATIVE-STATUS.json",
+      "bytes": 2985,
+      "sha256": "2603a2de4c47f7d145f007c7638851a3d76fd3ca59b086226a41d25b581b047b",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "PUBLIC-PRIVACY.json",
+      "bytes": 4036,
+      "sha256": "9242503af64dbefac35fdd5bfbd58d91af775d725abe2874a4ebf35a8065f323",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "README.md",
+      "bytes": 9469,
+      "sha256": "3f71ff3e6b3b0b3e7a7d0e239140a696c699b38d270b5907145781e21b61c6cd",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "VALIDATION.md",
+      "bytes": 7480,
+      "sha256": "ffff6b8ba219eb634a743961b02dcf934dedf23a02fc20ac98e9aedd6f93e690",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "VERIFICATION.md",
+      "bytes": 5171,
+      "sha256": "aade8ba8bd475c062303da1a374ca927d6411babc792df271244d8d76321282a",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "adapters.js",
+      "bytes": 6285,
+      "sha256": "45c00013611931b52881503b0f2b8f7db042fa5052161a01e7dde5a273823729",
+      "kind": "runtime"
+    },
+    {
+      "name": "app.js",
+      "bytes": 36616,
+      "sha256": "f44cdfad856953c367c74a9d0c83f51671f802d15adfbb7d9160cacb83cc094a",
+      "kind": "runtime"
+    },
+    {
+      "name": "catalog-client.js",
+      "bytes": 18549,
+      "sha256": "38f8fda35d5bc1606078d285834e98efff3745a9c468926afbb9d6c610895e34",
+      "kind": "runtime"
+    },
+    {
+      "name": "catalog-ui.js",
+      "bytes": 11304,
+      "sha256": "5bf9bd98907fc06f488910a72fd3dd6beab63136529319ebdcbfbfb44c73ed67",
+      "kind": "runtime"
+    },
+    {
+      "name": "collaps-bridge.js",
+      "bytes": 7510,
+      "sha256": "311b32eb06e2782ef2c56c831b8eaffc838c478836fc4230881526c7b7924bea",
+      "kind": "runtime"
+    },
+    {
+      "name": "collaps-verification.json",
+      "bytes": 2132,
+      "sha256": "1f88add9496fc60b7ce9108fd5436aea684b1b02350e535d7176bd14ee05406b",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "config.xml",
+      "bytes": 1808,
+      "sha256": "99fd4f05737a29e33223d3436d9dd68020af65777bed2db252c793eb2c9cb895",
+      "kind": "runtime"
+    },
+    {
+      "name": "core.js",
+      "bytes": 8893,
+      "sha256": "df1876ad54617ffb96f75bf771367d7997354320f3bc3bf3e69a98fd5997e8a0",
+      "kind": "runtime"
+    },
+    {
+      "name": "home-verification.json",
+      "bytes": 2149,
+      "sha256": "c0230005ee2fa724b6a4e0bda22cfbce65bfaa2b63b342afee816ed88af00f72",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "icon.png",
+      "bytes": 3014,
+      "sha256": "723ddcf5509f68736d2f0bbf5489ed35ae8a7caf1fa1fb4d66f88b4dd21a0ea5",
+      "kind": "runtime"
+    },
+    {
+      "name": "icon.svg",
+      "bytes": 254,
+      "sha256": "304726c4e1962748fdde2ce1831a6baa88928a23cdfaa042feb566b5706fff0c",
+      "kind": "runtime"
+    },
+    {
+      "name": "index.html",
+      "bytes": 12985,
+      "sha256": "346dabdde16f171a4c15f4f356ee7cdfee32a2ff2acc29f289bb02e087b2b697",
+      "kind": "runtime"
+    },
+    {
+      "name": "qol-verification.json",
+      "bytes": 1379,
+      "sha256": "c94ad75bcc8b7d52944717e04210fc4acbea0e2339be9ff46cfd5477f178b1cb",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "refinement-verification.json",
+      "bytes": 777,
+      "sha256": "a9d0c26f50e411379d34face1cebe73ec59520d01b1b8628bec89c36b5af9f16",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "runtime-fixes-verification.json",
+      "bytes": 1874,
+      "sha256": "3cca4f570b59b7d86cab2c44f7df0e34bc25f55f63336bc10c6dafe292562054",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "sounds-verification.json",
+      "bytes": 1402,
+      "sha256": "076da37c8dcf94c01806f4f2327a55aa8a305df7540b328f699c772c36dbd87f",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "styles.css",
+      "bytes": 19782,
+      "sha256": "83798b9110b4f4d1ce5c55731597c45519ab9ea1f4a19e6a21057057482b7791",
+      "kind": "runtime"
+    },
+    {
+      "name": "test-catalog-client.cjs",
+      "bytes": 14458,
+      "sha256": "414b0294ef11a5ee4b89160f6f450920c0fdf7dcff41ada5b722e33080ec472e",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "test-collaps-bridge.cjs",
+      "bytes": 5841,
+      "sha256": "b192e2bdcf0596812e2a19f8d7339690bb5c6a56b3619fd679902a3ef6130b2b",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "test-core.cjs",
+      "bytes": 5821,
+      "sha256": "6cb6b59291f8afb287ee819450c5835ae71d8e6da2a2deb572664a76970ea3ed",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "test-refinement.cjs",
+      "bytes": 2236,
+      "sha256": "4e8e3fe24bf041eda4e9b1d08cd3bdd25ac5f671b31788abb0b39eb8de64971b",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "test-sounds.cjs",
+      "bytes": 4869,
+      "sha256": "4228e27fb468719f31b96738c337a86bec917deec294a839acc0b6a5ac6b84cf",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "test-verification-tools.cjs",
+      "bytes": 6602,
+      "sha256": "d06745185bf665d6551a41f35b5af5ffeb132181f80f32680c2431b5c4c9c32f",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "test-watched.cjs",
+      "bytes": 2577,
+      "sha256": "f5a1d8505287389b1b0a5fd37f372a6d4046039cf2858b92619b95fafab94fff",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "validate_export.py",
+      "bytes": 4923,
+      "sha256": "372f5955cda1dd82ebac81cfc7cd5e761dacb095c5a5414c2fc20de7659380a8",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "verify-collaps.cjs",
+      "bytes": 16062,
+      "sha256": "2c2cd082b9f65dd142a8a208420f5a6173a35d4de6ce337139b0908ce1026824",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "verify-home.cjs",
+      "bytes": 18611,
+      "sha256": "e71a4cd915102806309594ccdd5c776aef71fb66fdee8432410fcfe51b022f03",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "verify-qol.cjs",
+      "bytes": 10006,
+      "sha256": "05d8260a0a357af2308063a6ce3d404a0e92fcb561aaa736720f3f07ac71d86c",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "verify-refinement.cjs",
+      "bytes": 6915,
+      "sha256": "99105b26186c29f2a791dca9c09955ba5f2efae51bf04ad69ced46ba6ac1d289",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "verify-sounds.cjs",
+      "bytes": 11315,
+      "sha256": "65f9ddb6fb2ab48e782f7761949e65f7b45c7a2c63e6f6762525eb3fce519712",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "verify-watched.cjs",
+      "bytes": 8784,
+      "sha256": "4067bb564dba681d034af930affb761d497c56635e164a67a691cc644f36ce8a",
+      "kind": "documentation_or_checks"
+    },
+    {
+      "name": "watched-verification.json",
+      "bytes": 1318,
+      "sha256": "810db3e80d14e2a3be4d8f964fc144e1ea70f6d5d335f091e48d1af03833f6b8",
+      "kind": "documentation_or_checks"
+    }
+  ],
+  "manifestPreservationScope": "Tizen target, application/package IDs, origins, privileges, settings, and icon retained; widget version advanced to 0.2.7",
+  "documentationLanguage": "en",
+  "runtimeLocalization": "ru, intentionally preserved",
+  "nativeBaselineUnsignedPackageSHA256": "0a13cba812d95e2f50f678cb968b6c4f1e06f392b4f936d8e5ca19175881db31",
+  "nativeBaselineVersion": "0.2.6",
+  "nativeBaselineRuntimePath": "../evidence/native-0.2.6/runtime/",
+  "runtimeFilesChangedFromNativeBaseline": [
+    "app.js",
+    "catalog-ui.js",
+    "config.xml"
+  ],
+  "runtimeFilesUnchangedFromNativeBaseline": 8
+}

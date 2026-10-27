@@ -1,0 +1,44 @@
+{
+  "version": "0.2.5",
+  "scope": "Own mocked cross-origin fixture; no real player, media or TV",
+  "checks": [
+    {
+      "name": "Shared URLs expose one neutral launch; distinct provider voice routes remain separate",
+      "passed": true
+    },
+    {
+      "name": "Dialog uses real correlated sounds response labels with no active-track claim",
+      "passed": true
+    },
+    {
+      "name": "D-pad and Tab remain in the parent audio dialog",
+      "passed": true
+    },
+    {
+      "name": "Selection forwards exact returned value, ignores cleanup, closes only the menu and preserves media state",
+      "passed": true
+    },
+    {
+      "name": "Reopening focuses the last requested item in this session; first Back closes the menu only",
+      "passed": true
+    },
+    {
+      "name": "Wrong-origin/source and late replies after Back cannot populate a closed dialog",
+      "passed": true
+    },
+    {
+      "name": "Six-second timeout and repeated error/retry preserve OK focus, suppress pending duplicate requests and recover explicitly",
+      "passed": true
+    },
+    {
+      "name": "Busy and same-frame reload close the menu, invalidate old membership and keep focus in parent",
+      "passed": true
+    },
+    {
+      "name": "Watch Back destroys iframe and source values never enter persisted library",
+      "passed": true
+    }
+  ],
+  "allPassed": true,
+  "unhandledErrors": []
+}

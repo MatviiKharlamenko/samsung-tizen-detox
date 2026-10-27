@@ -1,0 +1,40 @@
+{
+  "version": "0.2.5",
+  "scope": "Isolated own browser fixtures, no TV/real player/media",
+  "checks": [
+    {
+      "name": "Legacy v1 data is read without startup migration/write or automatic watched marks",
+      "passed": true
+    },
+    {
+      "name": "Manual mark persists across reload, keeps favorites/history/preferences and shows both independent badges",
+      "passed": true
+    },
+    {
+      "name": "Removing the only watched record survives reload and returns focus to the empty collection tab",
+      "passed": true
+    },
+    {
+      "name": "Storage failure leaves persisted data, count, button state and focus unchanged with a clear error",
+      "passed": true
+    },
+    {
+      "name": "Pagination renders at most30 cards, preserves detail return and clamps empty last page to the nearest remaining card",
+      "passed": true
+    },
+    {
+      "name": "D-pad scrolling keeps the selected watched card above the fixed remote hint",
+      "passed": true
+    },
+    {
+      "name": "At1000 records no mark is silently evicted and the DOM still has only one30-card page",
+      "passed": true
+    },
+    {
+      "name": "Opening/seeking/ended/closing a player writes recent history but never marks a film watched",
+      "passed": true
+    }
+  ],
+  "allPassed": true,
+  "unhandledErrors": []
+}

@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "recorded_date": "2026-10-27",
+  "evidence_origin": "maintainer_observation_sanitized_summary",
+  "record_status": "reboot_checked_session_closed",
+  "tested_device_count": 1,
+  "device": {
+    "model": "QE75Q74DATXXN",
+    "model_year": 2024,
+    "platform": "24_NKM2_QTV_T09",
+    "os": "Tizen",
+    "os_version": "9.0",
+    "architecture": "armv7l",
+    "kernel": "5.4.249",
+    "firmware_family": "T-NKM2DDEUC-0090",
+    "firmware_version": "2123.9",
+    "build_id": "T-NKM2DDEUC-0090-REL-202603190159",
+    "firmware_version_source": "native_about_tv_screen"
+  },
+  "root": {
+    "authenticated": true,
+    "uid": 0,
+    "euid": 0,
+    "gid": 0,
+    "cap_eff": "0000003fffffffff",
+    "smack_label": "User",
+    "seccomp_mode": 0,
+    "persistent_boot_root_installed": false,
+    "final_temporary_session_closed": true,
+    "egid": 0,
+    "runtime": "6.0",
+    "reacquired_after_software_reboot": true,
+    "temporary_sessions_closed": 2,
+    "owned_staging_cleaned": true,
+    "original_passwd_and_genuine_sdb_public_key_hashes_unchanged": true,
+    "transfer_receiver_closed": true
+  },
+  "reboot": {
+    "performed": true,
+    "kind": "full_software_os_reboot",
+    "boot_id_changed": true,
+    "power_removal_tested": false,
+    "firmware_update_tested": false
+  },
+  "sdk_channel": {
+    "evidence_level": "observed",
+    "connection_succeeded": true,
+    "plugin_version": "3.8.11_TV_REL",
+    "interactive_shell_enabled": false,
+    "root_toggle_enabled": false,
+    "sdb_root_permission_enabled": false,
+    "package_debug_enabled": true,
+    "dotnet_debug_enabled": true,
+    "listed_apps_before": 20,
+    "listed_apps_after": 20,
+    "own_web_app_installed_on_this_device": false,
+    "after_list_read_after_final_root_cleanup": true,
+    "ordinary_root_flags_still_disabled_after_cleanup": true
+  },
+  "verified_changes": [
+    {
+      "id": "russian_osd",
+      "evidence_level": "reboot-checked",
+      "vconf_key": "db/menu_widget/language",
+      "vconf_type": "string",
+      "previous_value": "en_GB.utf8",
+      "value": "ru_RU.utf8",
+      "installed_locale_confirmed": true,
+      "actual_russian_ui_confirmed": true
+    },
+    {
+      "id": "dns",
+      "evidence_level": "reboot-checked",
+      "previous_mode": "automatic",
+      "mode": "ipv4.manual",
+      "resolvers": [
+        "94.140.14.14",
+        "94.140.15.15"
+      ],
+      "actual_resolver_readback": true,
+      "advertising_domain_sinkhole_confirmed": true,
+      "youtube_netflix_appletv_dns_resolution_succeeded": true,
+      "playback_verified": false,
+      "youtube_netflix_appletv_https_200_before_and_after_reboot": true
+    },
+    {
+      "id": "targeted_ads",
+      "evidence_level": "reboot-checked",
+      "app_id": "com.samsung.tv.targeted-ad-service",
+      "previous_global_app_disable": false,
+      "global_app_disable": true,
+      "per_user_override_rows_before": 0,
+      "per_user_override_rows_after_reboot": 0,
+      "process_absent_after_reboot": true
+    },
+    {
+      "id": "samsung_analytics",
+      "evidence_level": "reboot-checked",
+      "app_id": "com.samsung.tizen.samsung-analytics",
+      "previous_global_app_disable": false,
+      "global_app_disable": true,
+      "per_user_override_rows_before": 0,
+      "per_user_override_rows_after_reboot": 0,
+      "process_absent_after_reboot": true
+    },
+    {
+      "id": "canalysis",
+      "evidence_level": "reboot-checked",
+      "unit": "canalysis-service.service",
+      "stock_unit_sha256": "71aee4ce76c4addf3a5f6b28ce0378995d265b60d66c5bc3f9d34ad6e5b26c98",
+      "guard_confirmed": true,
+      "marker_preexisted": false,
+      "own_marker_present": true,
+      "own_marker_sha256": "6f96d534fb01c2cb98b9da764cb0f522318c6b44c876b0d4e2dc887bab05592e",
+      "marker_mode": "0644",
+      "marker_owner": "root:root",
+      "marker_smack_label": "User",
+      "marker_bytes": 54,
+      "stop_job_accepted": true,
+      "main_pid": 0,
+      "process_absent": true,
+      "stock_unit_unchanged": true,
+      "active_state": "inactive",
+      "sub_state": "dead",
+      "condition_result": false,
+      "restart_count": 0,
+      "marker_hash_and_metadata_unchanged_after_reboot": true
+    },
+    {
+      "id": "startup",
+      "evidence_level": "reboot-checked",
+      "native_ui_confirmation": true,
+      "before": {
+        "smart_hub_home": true,
+        "last_app": false,
+        "samsung_tv_plus": true,
+        "multi_view_mirroring": false
+      },
+      "after": {
+        "smart_hub_home": false,
+        "last_app": false,
+        "samsung_tv_plus": false,
+        "multi_view_mirroring": false
+      }
+    }
+  ],
+  "observed_unchanged": {
+    "wifi": {
+      "frequency_mhz": 5540,
+      "signal_dbm": -53,
+      "reported_link_mbps": 433,
+      "band_already_5ghz": true,
+      "roam_or_ap_lock_applied": false,
+      "after_reboot": {
+        "frequency_mhz": 5540,
+        "signal_dbm": -54,
+        "reported_link_mbps": 433
+      }
+    },
+    "privacy": {
+      "viewing_information_consent_already_unchecked": true,
+      "interest_based_advertising_consent_already_unchecked": true,
+      "native_individual_dialogs_inspected": true,
+      "new_opt_out_claimed": false
+    },
+    "hbbtv": {
+      "preserved": true
+    },
+    "acr": {
+      "first_device_app_id": "com.samsung.tv.acr",
+      "first_device_app_id_installed": false,
+      "different_app_id": "com.samsung.tv.iacr",
+      "different_app_preserved": true,
+      "different_app_manifest_role": "Bixby companion with media and TV-search actions"
+    },
+    "other_analytics": {
+      "media_analytics_service_preserved": true,
+      "all_analytics_eliminated_claimed": false
+    }
+  },
+  "audit_coverage": {
+    "loaded_units_baseline": 900,
+    "failed_units_baseline": 7,
+    "complete_dependency_graph": false,
+    "loaded_units_after_reboot": 905,
+    "failed_units_after_reboot": 6,
+    "new_failed_units": 0,
+    "common_failed_units": 6,
+    "media_analytics_service_no_longer_failed": true,
+    "failure_change_cause_established": false
+  },
+  "performance": {
+    "comparable_measurement_performed": false,
+    "measured_speedup_claimed": false
+  },
+  "checks_not_run": [
+    "power_removal",
+    "firmware_update_persistence",
+    "full_post_change_drm_playback_and_audio",
+    "hdmi_hdr_audio_handshake",
+    "complete_telemetry_traffic_audit",
+    "stock_russian_keyboard",
+    "native_own_web_app_installation"
+  ],
+  "functional_checks": {
+    "youtube_premium_launch_and_loaded_recommendations_visually_confirmed_before_reboot": true,
+    "actual_video_playback_tested": false,
+    "netflix_appletv_drm_audio_tested": false,
+    "hdmi_hdr_audio_tested": false,
+    "stock_russian_keyboard_tested": false,
+    "native_own_web_app_installation_tested": false
+  }
+}

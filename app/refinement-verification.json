@@ -1,0 +1,24 @@
+{
+  "version": "0.2.5",
+  "scope": "Own isolated browser/HTTP fixtures, no TV or owner key",
+  "checks": [
+    {
+      "name": "Marking while byId is pending remains marked after film→series resolution; all owned collections/preference follow the identity",
+      "passed": true
+    },
+    {
+      "name": "Quota keeps the previous type/status/storage atomically; explicit type retry succeeds after storage recovers",
+      "passed": true
+    },
+    {
+      "name": "A pre-existing resolved record deduplicates without losing favorite/watched status or the more specific preference",
+      "passed": true
+    },
+    {
+      "name": "Unavailable metadata never gates manual marking indefinitely",
+      "passed": true
+    }
+  ],
+  "allPassed": true,
+  "unhandledErrors": []
+}

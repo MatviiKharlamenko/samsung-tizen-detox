@@ -1,0 +1,35 @@
+{
+  "version": "0.2.7",
+  "scope": "Isolated Chrome with controlled external HTTP and synthetic keys; no TV, real catalog authentication, player, or media",
+  "nativeValidated": false,
+  "suites": [
+    {
+      "script": "verify-qol.cjs",
+      "passedChecks": 12,
+      "allPassed": true
+    },
+    {
+      "script": "verify-home.cjs",
+      "passedChecks": 16,
+      "allPassed": true
+    }
+  ],
+  "newRegressions": [
+    "Empty search preserves remote Search focus and Enter retries without a navigation detour",
+    "Failed search preserves remote Search focus and Enter retries without a navigation detour",
+    "Completing a delayed empty search does not steal focus after navigation to another section",
+    "Key replace cancels in-flight search and rejects stale cache publication when fetch ignores abort",
+    "Key remove cancels in-flight search and rejects stale cache publication when fetch ignores abort",
+    "Key replace cancels in-flight byId and rejects stale cache publication when fetch ignores abort",
+    "Key remove cancels in-flight byId and rejects stale cache publication when fetch ignores abort"
+  ],
+  "cancellationFixture": "The real catalog client runs with fetch ignoring the abort signal. A captured prior-epoch cache adapter is also exercised as a late publisher. Both cancellation and cache isolation are asserted.",
+  "redPhase": "Both regressions failed against the preceding implementation before fixes; the numeric-version validator also failed its future-version test before adaptation.",
+  "historicalReportsRetained": true,
+  "unhandledErrors": [],
+  "runtimeSHA256": {
+    "app.js": "f44cdfad856953c367c74a9d0c83f51671f802d15adfbb7d9160cacb83cc094a",
+    "catalog-ui.js": "5bf9bd98907fc06f488910a72fd3dd6beab63136529319ebdcbfbfb44c73ed67",
+    "config.xml": "99fd4f05737a29e33223d3436d9dd68020af65777bed2db252c793eb2c9cb895"
+  }
+}

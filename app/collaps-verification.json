@@ -1,0 +1,64 @@
+{
+  "version": "0.2.5",
+  "scope": "Isolated local Chrome with own remote-origin fixture; no TV, real player or media",
+  "checks": [
+    {
+      "name": "Collaps is preferred over API-first Alloha when no preference is saved",
+      "passed": true
+    },
+    {
+      "name": "Init is loading, controls are disabled, and bridged iframe is inert/out of tab order",
+      "passed": true
+    },
+    {
+      "name": "Ready differs from playing; play uses an object command and waits for acknowledgement",
+      "passed": true
+    },
+    {
+      "name": "Pause label/state change only after native-shaped state3 acknowledgement",
+      "passed": true
+    },
+    {
+      "name": "±10 second controls send separate absolute seeks, clamp boundaries, and display only acknowledged position",
+      "passed": true
+    },
+    {
+      "name": "Buffering preserves each focused transport button, ignores OK until ready and never steals deliberate Back/browser focus",
+      "passed": true
+    },
+    {
+      "name": "Replay clears stale ended state on state2 without optional ended:false and the next OK pauses",
+      "passed": true
+    },
+    {
+      "name": "Wrong origin, sibling source and nonnumeric media fields cannot spoof UI state",
+      "passed": true
+    },
+    {
+      "name": "D-pad, Tab and programmatic iframe focus remain in parent controls",
+      "passed": true
+    },
+    {
+      "name": "TV-shaped Back10009 removes iframe and returns to the selected provider",
+      "passed": true
+    },
+    {
+      "name": "Changing translation resets state and rejects events from the removed frame",
+      "passed": true
+    },
+    {
+      "name": "First iframe load preserves valid ready/state messages received before its load event",
+      "passed": true
+    },
+    {
+      "name": "Repeated same-origin iframe navigation resets stale state/time/commands and starts a fresh readiness deadline",
+      "passed": true
+    },
+    {
+      "name": "Other providers retain their explicit unverified fallback and saved preference overrides default Collaps",
+      "passed": true
+    }
+  ],
+  "allPassed": true,
+  "unhandledErrors": []
+}

@@ -1,0 +1,89 @@
+{
+  "version": "0.2.7",
+  "evidenceOrigin": "Recorded native device observations cross-checked against retained session records; the current documentation review did not connect to the device or independently reread installed bytes",
+  "lastNativeConfirmedVersion": "0.2.6",
+  "keylessHomeNative026": "confirmed",
+  "nativeKeylessHome026": {
+    "cards": 3,
+    "setupPanelAbsent": true,
+    "keyedControlsHidden": true,
+    "ownerKeyPresent": false
+  },
+  "physicalHomeCardWatchedBack026": true,
+  "finalNativeCleanup026": {
+    "normalLaunch": true,
+    "debugSessionStopped": true,
+    "debugPortClosed": true,
+    "forwardListEmpty": true,
+    "homeCards": 3,
+    "loadedPosters": 3,
+    "catalogRequestsObserved": 0,
+    "ownerKeyPresent": false,
+    "watchedCountAfterQACleanup": 0,
+    "activeIframes": 0,
+    "visibleErrors": 0,
+    "temporaryKeyFormCancelled": true,
+    "rootSessionActive": false
+  },
+  "nativeTitleSearch026": {
+    "english": "Interstellar",
+    "resultFilmId": "258687",
+    "method": "query prepared diagnostically; physical Search Enter",
+    "errorShown": false,
+    "russianQueryUnicodeScalars": [
+      "U+0418",
+      "U+043D",
+      "U+0442",
+      "U+0435",
+      "U+0440",
+      "U+0441",
+      "U+0442",
+      "U+0435",
+      "U+043B",
+      "U+043B",
+      "U+0430",
+      "U+0440"
+    ]
+  },
+  "nativeAppHomePageConfirmed": true,
+  "physicalEnterSearchAndOwnKeyboardConfirmed": true,
+  "ownRussianAndEnglishKeyboardNative025": {
+    "cyrillicCharCode": 1072,
+    "latinCharCode": 97,
+    "clearAndBack": true
+  },
+  "manualWatchedNative": {
+    "confirmedVersion": "0.2.6",
+    "markAndBadge": true,
+    "collection": true,
+    "appRestartPersistence": true,
+    "unmarkAndQACleanup": true
+  },
+  "earlierNativeBase": {
+    "posters": "confirmed in 0.2.x",
+    "russianAndEnglishTitleSearch": "confirmed in 0.2.3",
+    "ownRussianAndEnglishKeyboard": "confirmed in 0.2.3",
+    "collapsPlayback": "confirmed in 0.2.3",
+    "physicalPauseSeekResume": "confirmed in 0.2.3",
+    "parentVoiceDialogAndBack": "confirmed in 0.2.4",
+    "samsungHomeTile": "confirmed in earlier native updates"
+  },
+  "authenticatedCatalogGET": "optional; not verified with a real API key",
+  "liveCatalogFeedsAndNativeCatalogNetworking": "not tested",
+  "stockSamsungRussianKeyboard": "not claimed",
+  "allVideoProvidersOrFilms": "not claimed",
+  "browserWebAppControl": "not claimed",
+  "macPreviewServerRequiredForInstalledApp": false,
+  "recordedNativeRuntimeMatch": {
+    "runtimeFiles": 11,
+    "matchesFrozenUnsignedSource": true,
+    "version": "0.2.6",
+    "snapshot": "../evidence/native-0.2.6/runtime/",
+    "appliesToCurrentSource": false
+  },
+  "installedDeviceBytesRecheckedDuringDocumentationReview": false,
+  "currentSourceVersion": "0.2.7",
+  "currentSourceNativeInstallationConfirmed": false,
+  "lastNativeInstallationConfirmed": true,
+  "nativeObservationScope": "0.2.6 baseline and earlier releases explicitly identified below; not source 0.2.7"
+}

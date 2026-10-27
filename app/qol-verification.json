@@ -1,0 +1,50 @@
+{
+  "version": "0.2.5",
+  "scope": "Local isolated browser; external metadata fixtures and blocked images, no TV/CDP input",
+  "checks": [
+    {
+      "name": "All three starter cards open exact known IDs/details in one click, with no Wikidata calls and correct return focus",
+      "passed": true
+    },
+    {
+      "name": "Enter on an empty search input opens the own keyboard without starting search",
+      "passed": true
+    },
+    {
+      "name": "Right on an empty field reaches Keyboard, and Enter opens it",
+      "passed": true
+    },
+    {
+      "name": "Right at the end of text reaches Keyboard without modifying text",
+      "passed": true
+    },
+    {
+      "name": "Left/right in the middle keep normal text caret movement",
+      "passed": true
+    },
+    {
+      "name": "Right collapses a text selection before a later boundary move",
+      "passed": true
+    },
+    {
+      "name": "Enter with text performs exactly one bilingual search, not a duplicate form submit",
+      "passed": true
+    },
+    {
+      "name": "IME composition Enter is left to the native input path",
+      "passed": true
+    },
+    {
+      "name": "No player frame or unhandled JS exception during QoL checks",
+      "passed": true
+    }
+  ],
+  "allPassed": true,
+  "catalogRequestCount": 3,
+  "playerRequestIds": [
+    "258687",
+    "47015",
+    "342"
+  ],
+  "unhandledErrors": []
+}

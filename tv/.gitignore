@@ -1,0 +1,30 @@
+# Local session state is never a public evidence artifact.
+private/
+state/
+local/
+work/
+raw/
+backups/
+screenshots/
+.env
+.env.*
+*.pem
+*.key
+*.token
+*.p12
+*.pfx
+*.jks
+*.db
+*.db-*
+*.sqlite*
+*.log
+*.pcap*
+*.wgt
+*.dll
+*.so
+*.tar*
+*.zip
+.DS_Store
+__pycache__/
+
+# This list is preventive. Public export must still use a file allowlist.

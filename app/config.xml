@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Web widget manifest. -->
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="urn:father-cinema:prototype" version="0.2.7" viewmodes="maximized">
+  <tizen:application id="FatherCine.Main" package="FatherCine" required_version="9.0"/>
+  <content src="index.html"/>
+  <icon src="icon.png"/>
+  <name>Кино дома</name>
+  <description>Поиск фильмов и выбор плееров для Samsung TV</description>
+  <tizen:profile name="tv-samsung"/>
+  <tizen:privilege name="http://tizen.org/privilege/internet"/>
+  <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+  <access origin="https://www.wikidata.org" subdomains="false"/>
+  <access origin="https://fbphdplay.top" subdomains="false"/>
+  <access origin="https://api.poiskkino.dev" subdomains="false"/>
+  <access origin="https://image.tmdb.org" subdomains="false"/>
+  <access origin="https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net" subdomains="false"/>
+  <access origin="https://st.kp.yandex.net" subdomains="false"/>
+  <access origin="https://avatars.mds.yandex.net" subdomains="false"/>
+  <access origin="https://theatre.stravers.live" subdomains="false"/>
+  <access origin="https://player.shortener2.link" subdomains="false"/>
+  <access origin="https://3a41cf05.obrut.show" subdomains="false"/>
+  <access origin="https://cdn-3a41cf05.obrut.show" subdomains="false"/>
+  <access origin="https://cdn.jsdelivr.net" subdomains="false"/>
+  <access origin="https://unpkg.com" subdomains="false"/>
+  <access origin="https://api.nextembed.ws" subdomains="false"/>
+  <tizen:setting screen-orientation="landscape" context-menu="disable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
+</widget>

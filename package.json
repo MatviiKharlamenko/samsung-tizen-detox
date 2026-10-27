@@ -1,0 +1,20 @@
+{
+  "name": "samsung-tizen-detox",
+  "version": "0.2.7",
+  "private": true,
+  "description": "Evidence-based Samsung Tizen notes and the Kino Doma TV app",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "python3 tools/check_repository.py",
+    "test": "npm run check && python3 -m unittest discover -s tools -p 'test_*.py' && node app/test-core.cjs && node app/test-watched.cjs && node app/test-refinement.cjs && node app/test-catalog-client.cjs && node app/test-collaps-bridge.cjs && node app/test-sounds.cjs && node app/test-verification-tools.cjs",
+    "preview": "python3 -m http.server 8765 --bind 127.0.0.1 --directory app",
+    "package:unsigned": "python3 tools/package_unsigned.py",
+    "test:browser": "node tools/run_browser_checks.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

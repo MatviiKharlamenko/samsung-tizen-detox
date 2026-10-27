@@ -1,0 +1,1026 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Samsung QE75Q74DATXXN exact sanitized evidence allowlist, snapshot 1",
+  "description": "Exact reviewed second-device summary with separate session, software-reboot and cleanup evidence. Raw output, private identifiers, additional fields and unsupported claims are rejected. This is not a general compatibility schema.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "recorded_date",
+    "evidence_origin",
+    "record_status",
+    "tested_device_count",
+    "device",
+    "root",
+    "reboot",
+    "sdk_channel",
+    "verified_changes",
+    "observed_unchanged",
+    "audit_coverage",
+    "performance",
+    "checks_not_run",
+    "functional_checks"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "recorded_date": {
+      "type": "string",
+      "const": "2026-10-27"
+    },
+    "evidence_origin": {
+      "type": "string",
+      "const": "maintainer_observation_sanitized_summary"
+    },
+    "record_status": {
+      "type": "string",
+      "const": "reboot_checked_session_closed"
+    },
+    "tested_device_count": {
+      "type": "integer",
+      "const": 1
+    },
+    "device": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "model",
+        "model_year",
+        "platform",
+        "os",
+        "os_version",
+        "architecture",
+        "kernel",
+        "firmware_family",
+        "firmware_version",
+        "build_id",
+        "firmware_version_source"
+      ],
+      "properties": {
+        "model": {
+          "type": "string",
+          "const": "QE75Q74DATXXN"
+        },
+        "model_year": {
+          "type": "integer",
+          "const": 2024
+        },
+        "platform": {
+          "type": "string",
+          "const": "24_NKM2_QTV_T09"
+        },
+        "os": {
+          "type": "string",
+          "const": "Tizen"
+        },
+        "os_version": {
+          "type": "string",
+          "const": "9.0"
+        },
+        "architecture": {
+          "type": "string",
+          "const": "armv7l"
+        },
+        "kernel": {
+          "type": "string",
+          "const": "5.4.249"
+        },
+        "firmware_family": {
+          "type": "string",
+          "const": "T-NKM2DDEUC-0090"
+        },
+        "firmware_version": {
+          "type": "string",
+          "const": "2123.9"
+        },
+        "build_id": {
+          "type": "string",
+          "const": "T-NKM2DDEUC-0090-REL-202603190159"
+        },
+        "firmware_version_source": {
+          "type": "string",
+          "const": "native_about_tv_screen"
+        }
+      }
+    },
+    "root": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authenticated",
+        "uid",
+        "euid",
+        "gid",
+        "cap_eff",
+        "smack_label",
+        "seccomp_mode",
+        "persistent_boot_root_installed",
+        "final_temporary_session_closed",
+        "egid",
+        "runtime",
+        "reacquired_after_software_reboot",
+        "temporary_sessions_closed",
+        "owned_staging_cleaned",
+        "original_passwd_and_genuine_sdb_public_key_hashes_unchanged",
+        "transfer_receiver_closed"
+      ],
+      "properties": {
+        "authenticated": {
+          "type": "boolean",
+          "const": true
+        },
+        "uid": {
+          "type": "integer",
+          "const": 0
+        },
+        "euid": {
+          "type": "integer",
+          "const": 0
+        },
+        "gid": {
+          "type": "integer",
+          "const": 0
+        },
+        "cap_eff": {
+          "type": "string",
+          "const": "0000003fffffffff"
+        },
+        "smack_label": {
+          "type": "string",
+          "const": "User"
+        },
+        "seccomp_mode": {
+          "type": "integer",
+          "const": 0
+        },
+        "persistent_boot_root_installed": {
+          "type": "boolean",
+          "const": false
+        },
+        "final_temporary_session_closed": {
+          "type": "boolean",
+          "const": true
+        },
+        "egid": {
+          "type": "integer",
+          "const": 0
+        },
+        "runtime": {
+          "type": "string",
+          "const": "6.0"
+        },
+        "reacquired_after_software_reboot": {
+          "type": "boolean",
+          "const": true
+        },
+        "temporary_sessions_closed": {
+          "type": "integer",
+          "const": 2
+        },
+        "owned_staging_cleaned": {
+          "type": "boolean",
+          "const": true
+        },
+        "original_passwd_and_genuine_sdb_public_key_hashes_unchanged": {
+          "type": "boolean",
+          "const": true
+        },
+        "transfer_receiver_closed": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "reboot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "performed",
+        "kind",
+        "boot_id_changed",
+        "power_removal_tested",
+        "firmware_update_tested"
+      ],
+      "properties": {
+        "performed": {
+          "type": "boolean",
+          "const": true
+        },
+        "kind": {
+          "type": "string",
+          "const": "full_software_os_reboot"
+        },
+        "boot_id_changed": {
+          "type": "boolean",
+          "const": true
+        },
+        "power_removal_tested": {
+          "type": "boolean",
+          "const": false
+        },
+        "firmware_update_tested": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "sdk_channel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_level",
+        "connection_succeeded",
+        "plugin_version",
+        "interactive_shell_enabled",
+        "root_toggle_enabled",
+        "sdb_root_permission_enabled",
+        "package_debug_enabled",
+        "dotnet_debug_enabled",
+        "listed_apps_before",
+        "listed_apps_after",
+        "own_web_app_installed_on_this_device",
+        "after_list_read_after_final_root_cleanup",
+        "ordinary_root_flags_still_disabled_after_cleanup"
+      ],
+      "properties": {
+        "evidence_level": {
+          "type": "string",
+          "const": "observed"
+        },
+        "connection_succeeded": {
+          "type": "boolean",
+          "const": true
+        },
+        "plugin_version": {
+          "type": "string",
+          "const": "3.8.11_TV_REL"
+        },
+        "interactive_shell_enabled": {
+          "type": "boolean",
+          "const": false
+        },
+        "root_toggle_enabled": {
+          "type": "boolean",
+          "const": false
+        },
+        "sdb_root_permission_enabled": {
+          "type": "boolean",
+          "const": false
+        },
+        "package_debug_enabled": {
+          "type": "boolean",
+          "const": true
+        },
+        "dotnet_debug_enabled": {
+          "type": "boolean",
+          "const": true
+        },
+        "listed_apps_before": {
+          "type": "integer",
+          "const": 20
+        },
+        "listed_apps_after": {
+          "type": "integer",
+          "const": 20
+        },
+        "own_web_app_installed_on_this_device": {
+          "type": "boolean",
+          "const": false
+        },
+        "after_list_read_after_final_root_cleanup": {
+          "type": "boolean",
+          "const": true
+        },
+        "ordinary_root_flags_still_disabled_after_cleanup": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "verified_changes": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "prefixItems": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "evidence_level",
+            "vconf_key",
+            "vconf_type",
+            "previous_value",
+            "value",
+            "installed_locale_confirmed",
+            "actual_russian_ui_confirmed"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "const": "russian_osd"
+            },
+            "evidence_level": {
+              "type": "string",
+              "const": "reboot-checked"
+            },
+            "vconf_key": {
+              "type": "string",
+              "const": "db/menu_widget/language"
+            },
+            "vconf_type": {
+              "type": "string",
+              "const": "string"
+            },
+            "previous_value": {
+              "type": "string",
+              "const": "en_GB.utf8"
+            },
+            "value": {
+              "type": "string",
+              "const": "ru_RU.utf8"
+            },
+            "installed_locale_confirmed": {
+              "type": "boolean",
+              "const": true
+            },
+            "actual_russian_ui_confirmed": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "evidence_level",
+            "previous_mode",
+            "mode",
+            "resolvers",
+            "actual_resolver_readback",
+            "advertising_domain_sinkhole_confirmed",
+            "youtube_netflix_appletv_dns_resolution_succeeded",
+            "playback_verified",
+            "youtube_netflix_appletv_https_200_before_and_after_reboot"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "const": "dns"
+            },
+            "evidence_level": {
+              "type": "string",
+              "const": "reboot-checked"
+            },
+            "previous_mode": {
+              "type": "string",
+              "const": "automatic"
+            },
+            "mode": {
+              "type": "string",
+              "const": "ipv4.manual"
+            },
+            "resolvers": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "prefixItems": [
+                {
+                  "type": "string",
+                  "const": "94.140.14.14"
+                },
+                {
+                  "type": "string",
+                  "const": "94.140.15.15"
+                }
+              ],
+              "items": false
+            },
+            "actual_resolver_readback": {
+              "type": "boolean",
+              "const": true
+            },
+            "advertising_domain_sinkhole_confirmed": {
+              "type": "boolean",
+              "const": true
+            },
+            "youtube_netflix_appletv_dns_resolution_succeeded": {
+              "type": "boolean",
+              "const": true
+            },
+            "playback_verified": {
+              "type": "boolean",
+              "const": false
+            },
+            "youtube_netflix_appletv_https_200_before_and_after_reboot": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "evidence_level",
+            "app_id",
+            "previous_global_app_disable",
+            "global_app_disable",
+            "per_user_override_rows_before",
+            "per_user_override_rows_after_reboot",
+            "process_absent_after_reboot"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "const": "targeted_ads"
+            },
+            "evidence_level": {
+              "type": "string",
+              "const": "reboot-checked"
+            },
+            "app_id": {
+              "type": "string",
+              "const": "com.samsung.tv.targeted-ad-service"
+            },
+            "previous_global_app_disable": {
+              "type": "boolean",
+              "const": false
+            },
+            "global_app_disable": {
+              "type": "boolean",
+              "const": true
+            },
+            "per_user_override_rows_before": {
+              "type": "integer",
+              "const": 0
+            },
+            "per_user_override_rows_after_reboot": {
+              "type": "integer",
+              "const": 0
+            },
+            "process_absent_after_reboot": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "evidence_level",
+            "app_id",
+            "previous_global_app_disable",
+            "global_app_disable",
+            "per_user_override_rows_before",
+            "per_user_override_rows_after_reboot",
+            "process_absent_after_reboot"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "const": "samsung_analytics"
+            },
+            "evidence_level": {
+              "type": "string",
+              "const": "reboot-checked"
+            },
+            "app_id": {
+              "type": "string",
+              "const": "com.samsung.tizen.samsung-analytics"
+            },
+            "previous_global_app_disable": {
+              "type": "boolean",
+              "const": false
+            },
+            "global_app_disable": {
+              "type": "boolean",
+              "const": true
+            },
+            "per_user_override_rows_before": {
+              "type": "integer",
+              "const": 0
+            },
+            "per_user_override_rows_after_reboot": {
+              "type": "integer",
+              "const": 0
+            },
+            "process_absent_after_reboot": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "evidence_level",
+            "unit",
+            "stock_unit_sha256",
+            "guard_confirmed",
+            "marker_preexisted",
+            "own_marker_present",
+            "own_marker_sha256",
+            "marker_mode",
+            "marker_owner",
+            "marker_smack_label",
+            "marker_bytes",
+            "stop_job_accepted",
+            "main_pid",
+            "process_absent",
+            "stock_unit_unchanged",
+            "active_state",
+            "sub_state",
+            "condition_result",
+            "restart_count",
+            "marker_hash_and_metadata_unchanged_after_reboot"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "const": "canalysis"
+            },
+            "evidence_level": {
+              "type": "string",
+              "const": "reboot-checked"
+            },
+            "unit": {
+              "type": "string",
+              "const": "canalysis-service.service"
+            },
+            "stock_unit_sha256": {
+              "type": "string",
+              "const": "71aee4ce76c4addf3a5f6b28ce0378995d265b60d66c5bc3f9d34ad6e5b26c98"
+            },
+            "guard_confirmed": {
+              "type": "boolean",
+              "const": true
+            },
+            "marker_preexisted": {
+              "type": "boolean",
+              "const": false
+            },
+            "own_marker_present": {
+              "type": "boolean",
+              "const": true
+            },
+            "own_marker_sha256": {
+              "type": "string",
+              "const": "6f96d534fb01c2cb98b9da764cb0f522318c6b44c876b0d4e2dc887bab05592e"
+            },
+            "marker_mode": {
+              "type": "string",
+              "const": "0644"
+            },
+            "marker_owner": {
+              "type": "string",
+              "const": "root:root"
+            },
+            "marker_smack_label": {
+              "type": "string",
+              "const": "User"
+            },
+            "marker_bytes": {
+              "type": "integer",
+              "const": 54
+            },
+            "stop_job_accepted": {
+              "type": "boolean",
+              "const": true
+            },
+            "main_pid": {
+              "type": "integer",
+              "const": 0
+            },
+            "process_absent": {
+              "type": "boolean",
+              "const": true
+            },
+            "stock_unit_unchanged": {
+              "type": "boolean",
+              "const": true
+            },
+            "active_state": {
+              "type": "string",
+              "const": "inactive"
+            },
+            "sub_state": {
+              "type": "string",
+              "const": "dead"
+            },
+            "condition_result": {
+              "type": "boolean",
+              "const": false
+            },
+            "restart_count": {
+              "type": "integer",
+              "const": 0
+            },
+            "marker_hash_and_metadata_unchanged_after_reboot": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "evidence_level",
+            "native_ui_confirmation",
+            "before",
+            "after"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "const": "startup"
+            },
+            "evidence_level": {
+              "type": "string",
+              "const": "reboot-checked"
+            },
+            "native_ui_confirmation": {
+              "type": "boolean",
+              "const": true
+            },
+            "before": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "smart_hub_home",
+                "last_app",
+                "samsung_tv_plus",
+                "multi_view_mirroring"
+              ],
+              "properties": {
+                "smart_hub_home": {
+                  "type": "boolean",
+                  "const": true
+                },
+                "last_app": {
+                  "type": "boolean",
+                  "const": false
+                },
+                "samsung_tv_plus": {
+                  "type": "boolean",
+                  "const": true
+                },
+                "multi_view_mirroring": {
+                  "type": "boolean",
+                  "const": false
+                }
+              }
+            },
+            "after": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "smart_hub_home",
+                "last_app",
+                "samsung_tv_plus",
+                "multi_view_mirroring"
+              ],
+              "properties": {
+                "smart_hub_home": {
+                  "type": "boolean",
+                  "const": false
+                },
+                "last_app": {
+                  "type": "boolean",
+                  "const": false
+                },
+                "samsung_tv_plus": {
+                  "type": "boolean",
+                  "const": false
+                },
+                "multi_view_mirroring": {
+                  "type": "boolean",
+                  "const": false
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": false
+    },
+    "observed_unchanged": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "wifi",
+        "privacy",
+        "hbbtv",
+        "acr",
+        "other_analytics"
+      ],
+      "properties": {
+        "wifi": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "frequency_mhz",
+            "signal_dbm",
+            "reported_link_mbps",
+            "band_already_5ghz",
+            "roam_or_ap_lock_applied",
+            "after_reboot"
+          ],
+          "properties": {
+            "frequency_mhz": {
+              "type": "integer",
+              "const": 5540
+            },
+            "signal_dbm": {
+              "type": "integer",
+              "const": -53
+            },
+            "reported_link_mbps": {
+              "type": "integer",
+              "const": 433
+            },
+            "band_already_5ghz": {
+              "type": "boolean",
+              "const": true
+            },
+            "roam_or_ap_lock_applied": {
+              "type": "boolean",
+              "const": false
+            },
+            "after_reboot": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "frequency_mhz",
+                "signal_dbm",
+                "reported_link_mbps"
+              ],
+              "properties": {
+                "frequency_mhz": {
+                  "type": "integer",
+                  "const": 5540
+                },
+                "signal_dbm": {
+                  "type": "integer",
+                  "const": -54
+                },
+                "reported_link_mbps": {
+                  "type": "integer",
+                  "const": 433
+                }
+              }
+            }
+          }
+        },
+        "privacy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "viewing_information_consent_already_unchecked",
+            "interest_based_advertising_consent_already_unchecked",
+            "native_individual_dialogs_inspected",
+            "new_opt_out_claimed"
+          ],
+          "properties": {
+            "viewing_information_consent_already_unchecked": {
+              "type": "boolean",
+              "const": true
+            },
+            "interest_based_advertising_consent_already_unchecked": {
+              "type": "boolean",
+              "const": true
+            },
+            "native_individual_dialogs_inspected": {
+              "type": "boolean",
+              "const": true
+            },
+            "new_opt_out_claimed": {
+              "type": "boolean",
+              "const": false
+            }
+          }
+        },
+        "hbbtv": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "preserved"
+          ],
+          "properties": {
+            "preserved": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        },
+        "acr": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "first_device_app_id",
+            "first_device_app_id_installed",
+            "different_app_id",
+            "different_app_preserved",
+            "different_app_manifest_role"
+          ],
+          "properties": {
+            "first_device_app_id": {
+              "type": "string",
+              "const": "com.samsung.tv.acr"
+            },
+            "first_device_app_id_installed": {
+              "type": "boolean",
+              "const": false
+            },
+            "different_app_id": {
+              "type": "string",
+              "const": "com.samsung.tv.iacr"
+            },
+            "different_app_preserved": {
+              "type": "boolean",
+              "const": true
+            },
+            "different_app_manifest_role": {
+              "type": "string",
+              "const": "Bixby companion with media and TV-search actions"
+            }
+          }
+        },
+        "other_analytics": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "media_analytics_service_preserved",
+            "all_analytics_eliminated_claimed"
+          ],
+          "properties": {
+            "media_analytics_service_preserved": {
+              "type": "boolean",
+              "const": true
+            },
+            "all_analytics_eliminated_claimed": {
+              "type": "boolean",
+              "const": false
+            }
+          }
+        }
+      }
+    },
+    "audit_coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "loaded_units_baseline",
+        "failed_units_baseline",
+        "complete_dependency_graph",
+        "loaded_units_after_reboot",
+        "failed_units_after_reboot",
+        "new_failed_units",
+        "common_failed_units",
+        "media_analytics_service_no_longer_failed",
+        "failure_change_cause_established"
+      ],
+      "properties": {
+        "loaded_units_baseline": {
+          "type": "integer",
+          "const": 900
+        },
+        "failed_units_baseline": {
+          "type": "integer",
+          "const": 7
+        },
+        "complete_dependency_graph": {
+          "type": "boolean",
+          "const": false
+        },
+        "loaded_units_after_reboot": {
+          "type": "integer",
+          "const": 905
+        },
+        "failed_units_after_reboot": {
+          "type": "integer",
+          "const": 6
+        },
+        "new_failed_units": {
+          "type": "integer",
+          "const": 0
+        },
+        "common_failed_units": {
+          "type": "integer",
+          "const": 6
+        },
+        "media_analytics_service_no_longer_failed": {
+          "type": "boolean",
+          "const": true
+        },
+        "failure_change_cause_established": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "performance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "comparable_measurement_performed",
+        "measured_speedup_claimed"
+      ],
+      "properties": {
+        "comparable_measurement_performed": {
+          "type": "boolean",
+          "const": false
+        },
+        "measured_speedup_claimed": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "checks_not_run": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "prefixItems": [
+        {
+          "type": "string",
+          "const": "power_removal"
+        },
+        {
+          "type": "string",
+          "const": "firmware_update_persistence"
+        },
+        {
+          "type": "string",
+          "const": "full_post_change_drm_playback_and_audio"
+        },
+        {
+          "type": "string",
+          "const": "hdmi_hdr_audio_handshake"
+        },
+        {
+          "type": "string",
+          "const": "complete_telemetry_traffic_audit"
+        },
+        {
+          "type": "string",
+          "const": "stock_russian_keyboard"
+        },
+        {
+          "type": "string",
+          "const": "native_own_web_app_installation"
+        }
+      ],
+      "items": false
+    },
+    "functional_checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "youtube_premium_launch_and_loaded_recommendations_visually_confirmed_before_reboot",
+        "actual_video_playback_tested",
+        "netflix_appletv_drm_audio_tested",
+        "hdmi_hdr_audio_tested",
+        "stock_russian_keyboard_tested",
+        "native_own_web_app_installation_tested"
+      ],
+      "properties": {
+        "youtube_premium_launch_and_loaded_recommendations_visually_confirmed_before_reboot": {
+          "type": "boolean",
+          "const": true
+        },
+        "actual_video_playback_tested": {
+          "type": "boolean",
+          "const": false
+        },
+        "netflix_appletv_drm_audio_tested": {
+          "type": "boolean",
+          "const": false
+        },
+        "hdmi_hdr_audio_tested": {
+          "type": "boolean",
+          "const": false
+        },
+        "stock_russian_keyboard_tested": {
+          "type": "boolean",
+          "const": false
+        },
+        "native_own_web_app_installation_tested": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    }
+  }
+}

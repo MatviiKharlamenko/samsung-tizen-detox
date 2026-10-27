@@ -1,0 +1,106 @@
+{
+  "version": "0.2.7",
+  "reviewScope": "Public app source, tests, documentation, report summaries, and manifest; not a live device or service audit",
+  "method": "Explicit source allowlist, recursive file/hash comparison, binary inspection, targeted textual scans, and manual review of network/storage/trust boundaries",
+  "runtimeFileCount": 11,
+  "allFilesExplicitlyAllowlisted": true,
+  "runtimeProvenance": {
+    "baseline": "Preserved native 0.2.6 snapshot",
+    "byteForByteComparedRuntimeFiles": 11,
+    "widgetManifestAndIconPreserved": false,
+    "installedDeviceBytesRecheckedDuringDocumentationReview": false,
+    "currentSourceVersion": "0.2.7",
+    "baselinePath": "../evidence/native-0.2.6/runtime/",
+    "runtimeFilesUnchangedFromNativeBaseline": 8,
+    "runtimeFilesChangedFromNativeBaseline": [
+      "app.js",
+      "catalog-ui.js",
+      "config.xml"
+    ],
+    "currentSourceNativeValidated": false,
+    "compatibilityIdentityOriginsPrivilegesAndIconPreserved": true
+  },
+  "checks": [
+    {
+      "patternClass": "private_LAN_addresses",
+      "matchingFiles": 0
+    },
+    {
+      "patternClass": "personal_absolute_paths",
+      "matchingFiles": 0
+    },
+    {
+      "patternClass": "private_key_or_certificate_material",
+      "matchingFiles": 0
+    },
+    {
+      "patternClass": "real_player_token_URLs",
+      "matchingFiles": 0
+    },
+    {
+      "patternClass": "private_device_or_debug_records",
+      "matchingFiles": 0
+    }
+  ],
+  "excluded": [
+    "all WGT installers",
+    "signatures/certificates/private keys",
+    "real API keys",
+    "TV identity/network/debug records",
+    "raw player/token logs",
+    "screenshots",
+    "binary posters and media",
+    "third-party player source",
+    "native/root helpers"
+  ],
+  "syntheticTestValues": "Explicitly test-only key/token-shaped fixtures are retained in tests; no real credentials or runtime defaults",
+  "explicitSyntheticTokenQueryCases": {
+    "test-core.cjs": 2,
+    "test-collaps-bridge.cjs": 1
+  },
+  "allowedPublicLocators": "Exact external service origins, public film IDs, and public poster CDN paths are intentional source configuration/metadata, not private device IDs or media tokens",
+  "language": {
+    "documentation": "English",
+    "reportNarrative": "English",
+    "runtimeUI": "Russian, preserved byte for byte",
+    "exceptions": "Localized UI/film/genre/keyboard data and selector/assertion expectations remain Cyrillic in runtime/tests; native query JSON uses Unicode scalar values"
+  },
+  "publicApplicationIdentityPreserved": true,
+  "securityLimits": [
+    "localStorage is not encrypted secret storage",
+    "Embedded third-party frames can execute their own code and contact their own services",
+    "Parent URL/CSP restrictions do not establish tracker-free embedded content",
+    "No verified authenticated API request or all-provider compatibility claim"
+  ],
+  "knownLimit": "Scoped allowlist/pattern/manual review; not a general DLP or complete security guarantee",
+  "reviewVerification": {
+    "nodeDomainChecksPassed": 48,
+    "browserScriptSyntaxChecksPassed": 6,
+    "verificationToolGroupsPassed": 2,
+    "reportDirectoryPreludeCasesPassed": 18,
+    "normalAndOptimizedValidatorCasesPassed": 26,
+    "realBrowsersLaunchedForToolReview": 0,
+    "networkOrTVCallsForToolReview": 0,
+    "historicalBrowserReportsOverwritten": false,
+    "repositoryPythonTestsPassed": 17
+  },
+  "documentationReviewScope": {
+    "tvConnection": false,
+    "signerOrOwnerKeyFilesRead": false,
+    "retainedNativeObservationFieldsReviewed": true,
+    "rawPrivateEvidenceCopied": false
+  },
+  "currentSourceBrowserVerification": {
+    "sourceVersion": "0.2.7",
+    "qolChecksPassed": 12,
+    "homeChecksPassed": 16,
+    "newRegressionCasesPassed": 7,
+    "nativeValidated": false,
+    "evidence": "runtime-fixes-verification.json",
+    "allSixSuitesPassed": true,
+    "totalBrowserChecksPassed": 63,
+    "completeRunEvidence": "BROWSER-STATUS.json",
+    "playwrightVersion": "1.62.1",
+    "historicalReportsRetained": true
+  }
+}

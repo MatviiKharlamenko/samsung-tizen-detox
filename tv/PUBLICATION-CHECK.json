@@ -1,0 +1,119 @@
+{
+  "package": "Samsung Tizen Detox TV documentation",
+  "review_date": "2026-10-27",
+  "observation_dates": [
+    "2026-10-26",
+    "2026-10-27"
+  ],
+  "documentation_release": "2.2",
+  "publication_status": "repository_review",
+  "scope": "English documentation and sanitized observations for two exact TV builds; application evidence retains its own model and version boundaries",
+  "language": "English",
+  "content_allowlist": [
+    ".gitignore",
+    "LICENSE",
+    "MANIFEST.sha256",
+    "PUBLICATION-CHECK.json",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "docs/limitations.md",
+    "docs/native-ime.md",
+    "docs/q74d-results.md",
+    "docs/rollback.md",
+    "docs/root-capabilities.md",
+    "docs/sdk-and-app.md",
+    "docs/sources.md",
+    "docs/validation.md",
+    "docs/verified-recipes.md",
+    "profiles/qe75q64dauxxn-tizen9-2123.9.json",
+    "profiles/qe75q74datxxn-tizen9-2123.9.json",
+    "schemas/public-evidence.schema.json",
+    "schemas/q74d-evidence.schema.json"
+  ],
+  "current_verified_app_version": "0.2.6",
+  "current_source_app_version": "0.2.7",
+  "native_app_tested_models": [
+    "QE75Q64DAUXXN"
+  ],
+  "chosen_catalog_mode": "keyless",
+  "personal_key_configured": false,
+  "key_setup_pending": false,
+  "privacy_review": {
+    "passed": true,
+    "scope": "Git index blobs and working files; explicit registered evidence pairs; no raw TV artifacts in public files",
+    "raw_evidence_or_images_included": false,
+    "third_party_source_code_included": false,
+    "private_network_or_device_identifiers_included": false,
+    "method": "Automated publication pattern checks, closed profile validation and manual factual review",
+    "limitations": "Pattern checks and review reduce disclosure risk; they do not prove absence of every possible personal datum."
+  },
+  "relative_links": {
+    "passed": true,
+    "method": "Local Markdown link target and heading-anchor validation by tools/check_repository.py"
+  },
+  "source_review": {
+    "original_pinned_source_references_retained": true,
+    "new_exact_model_sources_checked": [
+      "https://www.samsung.com/nl/support/model/QE75Q74DATXXN/",
+      "https://www.samsung.com/nl/tvs/qled-tv/q74d-75-inch-qled-4k-tizen-os-smart-tv-qe75q74datxxn/"
+    ],
+    "new_source_observation_date": "2026-10-27",
+    "all_external_links_refetched": false,
+    "license_notices_present": true
+  },
+  "evidence_schema_check": {
+    "passed": true,
+    "registered_profile_count": 2,
+    "method": "Same closed-schema and exact identity validation for registered worktree and Git index profile/schema blobs",
+    "general_json_schema_engine_used": false,
+    "original_q64_profile_and_schema_unchanged": true,
+    "negative_cases_cover": [
+      "unknown or missing registered paths",
+      "staged-only unregistered or modified evidence",
+      "weakened nested schemas",
+      "crossed model/schema pairs",
+      "unsupported identity or unverified claims"
+    ]
+  },
+  "factual_review": {
+    "disable_stop_and_start_guard_distinguished": true,
+    "owned_marker_rollback_preconditions_explicit": true,
+    "historical_root_separate_from_closed_sessions": true,
+    "stock_russian_ime_not_claimed": true,
+    "speed_gain_not_claimed": true,
+    "tizen_10_upgrade_not_claimed": true,
+    "app_restart_not_called_os_reboot": true,
+    "q64_global_disable_count": 4,
+    "q74_global_disable_count": 2,
+    "q74_hbbtv_and_iacr_preserved": true,
+    "q74_wifi_already_5ghz": true,
+    "q74_privacy_consents_already_unchecked": true,
+    "q74_full_software_reboot_verified": true,
+    "q74_final_root_session_closed": true,
+    "systemd_failures": {
+      "QE75Q64DAUXXN": {
+        "before": 7,
+        "after": 6,
+        "new_after": 0
+      },
+      "QE75Q74DATXXN": {
+        "before": 7,
+        "after": 6,
+        "new_after": 0
+      }
+    },
+    "systemd_causality_inferred": false,
+    "full_media_regression_claimed": false,
+    "every_system_inverse_exercised": false
+  },
+  "manifest_policy": "SHA-256 of every allowlisted file except MANIFEST.sha256 itself; paths are relative to tv/.",
+  "remaining_verification": [
+    "Full post-change DRM playback, audio and HDMI/HDR regression on both models",
+    "Power-removal, firmware-update and long standby persistence",
+    "Matched repeated performance measurements",
+    "Complete telemetry traffic audit",
+    "Stock Russian native IME remains unverified or unresolved",
+    "Kino Doma installation and playback on the Q74D",
+    "Complete rollback and reapply for every retained system change"
+  ]
+}
